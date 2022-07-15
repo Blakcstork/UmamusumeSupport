@@ -1,5 +1,3 @@
-
-import {useEffect, useState} from "react"
 import styles from "../css/searchInput.module.css"
 
 
