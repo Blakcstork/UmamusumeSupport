@@ -1,0 +1,41 @@
+[
+    {
+        "name" : "하코다테 주니어 스테이크스",
+        "month" : 7,
+        "day" : "후",
+        "period" : "junior",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "하코다테",
+        "curve" : "right",
+        "require" : 350,
+        "fan" : 3100       
+    },
+    {
+        "name" : "츄코 주니어 스테이크스",
+        "month" : 7,
+        "day" : "후",
+        "period" : "junior",
+        "distance" : 1600,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "츄코",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 1600       
+    },
+    {
+        "name" : "달리아상",
+        "month" : 8,
+        "day" : "전",
+        "period" : "junior",
+        "distance" : 1400,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "니이가타",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 1600       
+    }
+]

@@ -4,7 +4,10 @@ import styles from "../css/searchInput.module.css"
 function SearchInput({searchType}){
     return(
         <div>
-            <input type = "text" placeholder="please type input" className={styles.search}/>
+            <form>
+                <input type = "text" placeholder="please type input" className={styles.search}/>
+                <button type = "submit"> Go </button>
+            </form>
         </div>
     )
 }
