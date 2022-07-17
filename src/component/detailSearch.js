@@ -1,3 +1,5 @@
+
+
 function DetailSearch(){
     return (
         <form>
@@ -14,7 +16,13 @@ function DetailSearch(){
                 <label><input type = "radio" name = "ground" value = "dirt"/> 더트 </label>         
             </div>
             <div>
-
+                <p>시즌</p>
+                <label><input type = "radio" name = "season" value = "junior"/> 주니어 </label>
+                <label><input type = "radio" name = "season" value = "classic"/> 클래식 </label>  
+                <label><input type = "radio" name = "season" value = "senior"/> 시니어 </label>  
+            </div>
+            <div>
+                <button type = "submit">검색</button>
             </div>
         </form>
     )
