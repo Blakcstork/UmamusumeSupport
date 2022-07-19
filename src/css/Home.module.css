@@ -1,4 +1,9 @@
 .homeContent{
     height : 900px;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items : normal;
     padding : 0px 100px;
+    overflow:hidden;
 }

@@ -2,6 +2,7 @@
 
 function DetailSearch(){
     return (
+        <div>
         <form>
             <div>
                 <p>거리</p>
@@ -25,6 +26,7 @@ function DetailSearch(){
                 <button type = "submit">검색</button>
             </div>
         </form>
+        </div>
     )
 }
 
