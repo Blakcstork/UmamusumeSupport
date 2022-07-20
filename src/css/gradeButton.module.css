@@ -1,0 +1,32 @@
+#smallBtn{
+    width : 40px;
+    height : 40px;
+    border :none;
+    border-radius : 15px;
+    font-size : 10px;
+    font-family : Hanna;
+    background-color : #EFAB3E;
+}
+
+.g1Btn{
+    background-color: #3685E4 !important;
+    font-size : 12px !important;
+    font-weight: bold;
+}
+
+.g2Btn{
+    background-color: #F45A87 !important;
+    font-size : 12px !important;
+    font-weight: bold;
+}
+
+.g3Btn{
+    background-color: #58C470 !important;
+    font-size : 12px !important;
+    font-weight: bold;
+}
+
+.opBtn{
+    font-size : 12px !important;
+    font-weight : bold;
+}

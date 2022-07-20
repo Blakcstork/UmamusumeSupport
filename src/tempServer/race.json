@@ -1580,10 +1580,209 @@
         "fan" : 2000,
         "gate" : 18,
         "img" : ""       
+    },
+
+
+
+    {
+        "name" : "야스다 기념",
+        "month" : 6,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1600,
+        "type" : "grass",
+        "grade" : "G1",
+        "place" : "도쿄",
+        "curve" : "left",
+        "require" : 15000,        
+        "fan" : 13000,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "나루오 기념",
+        "month" : 6,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 2000,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "한신",
+        "curve" : "rightI",
+        "require" : 1500,        
+        "fan" : 4100,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "엡섬컵",
+        "month" : 6,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "도쿄",
+        "curve" : "left",
+        "require" : 1500,        
+        "fan" : 4100,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "텐포산 스테이크스",
+        "month" : 6,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1400,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "한신",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "슬레이프니르 스테이크스",
+        "month" : 6,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 2100,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "도쿄",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 16,
+        "img" : ""       
+    },
+
+
+
+
+    {
+        "name" : "타카라즈카 기념",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 2200,
+        "type" : "grass",
+        "grade" : "G1",
+        "place" : "한신",
+        "curve" : "rightI",
+        "require" : 20000,        
+        "fan" : 15000,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "하코다테 스프린트 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "하코다테",
+        "curve" : "right",
+        "require" : 1250,        
+        "fan" : 3900,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "유니콘 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1600,
+        "type" : "dirt",
+        "grade" : "G3",
+        "place" : "도쿄",
+        "curve" : "left",
+        "require" : 750,        
+        "fan" : 3500,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "아할 테케 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1600,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "도쿄",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "요나고 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1600,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "한신",
+        "curve" : "rightO",
+        "require" : 350,        
+        "fan" : 2500,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "오누마 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1700,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "하코다테",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2300,
+        "gate" : 14,
+        "img" : ""       
+    },
+    {
+        "name" : "파라다이스 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1400,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "도쿄",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 2500,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "산노미야 스테이크스",
+        "month" : 6,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "한신",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 16,
+        "img" : ""       
     }
-
-
-
 
 
     

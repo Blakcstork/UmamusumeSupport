@@ -8,13 +8,18 @@ import dummy from "../tempServer/race.json"
 
 
 
-function RaceList({coverImg, name, grade, distance, type, curve, fan}){
+function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
     return (
         <div className={styles.raceList}>
             <div className = {styles.raceImage}>
                 this is image
             </div>
-            <div>{grade}</div>
+            {
+                grade === "G1" ? <button id={styles.smallBtn} className={styles.g1Btn}>GⅠ</button> :
+                grade === "G2" ? <button id={styles.smallBtn} className={styles.g2Btn}>GⅡ</button> :
+                grade === "G3" ? <button id={styles.smallBtn} className={styles.g3Btn}>GⅢ</button> : 
+                grade === "OP" ? <button id={styles.smallBtn} className={styles.opBtn}>{grade}</button> : <button id={styles.smallBtn}>{grade}</button>
+            }
             <div>
                 <p>{name}</p>
             </div>
@@ -39,6 +44,36 @@ function RaceList({coverImg, name, grade, distance, type, curve, fan}){
 }
 
 
+function DetailRaceInfo(){
+    return(
+        
+        <div className={styles.detailRaceInfo}>
+            <div>
+                Race Image
+            </div>
+            <table  className = {styles.infoTable}>
+                <tbody>
+                <tr>
+                    <td>시기</td>
+                    <td>n월 전반</td>
+                </tr>
+                <tr>
+                    <td>등급</td>
+                    <td><button>G3</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+            <div>
+                Track Image
+            </div>
+        </div>
+    )
+}
+
 
 
 
@@ -51,6 +86,7 @@ function RaceContent(){
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <SearchInput />
             <DetailSearch />
+            <DetailRaceInfo />
             <div>
             <ul>
                 {
@@ -62,6 +98,7 @@ function RaceContent(){
                             name = {race.name}
                             grade = {race.grade}
                             distance = {race.distance}
+                            require = {race.require}
                             type = {race.type}
                             curve = {race.curve}
                             fan = {race.fan}

@@ -1,7 +1,6 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Movie from "./routes/Movie";
 import Movies from "./routes/Movies";
-import SearchInput from "./component/searchInput";
 import Home from "./routes/Home";
 
 import "./css/AllAbove.css";

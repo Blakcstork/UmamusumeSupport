@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+
+
+
 .contents {
     width : 100%;
     height : 100%;
@@ -49,10 +61,57 @@
     font-size : 12px;
 }
 
-.periodBar{
-    display : inline-block;
-    width : 70%;
-    height : 30px;
-    background-color : #ececec;
-    border-radius : 6px;
+
+
+
+.detailRaceInfo{
+    display : flex;
+
+    width : 500px;
+    height : 600px;
+    
+    background-color : white;
+    border : 1px;
+    border-radius : 12px;
+}
+
+
+.infoTable{
+    border : 1px solid black;
+}
+
+
+
+
+#smallBtn{
+    width : 40px;
+    height : 40px;
+    border :none;
+    border-radius : 15px;
+    font-size : 10px;
+    font-family : Hanna;
+    background-color : #EFAB3E;
+}
+
+.g1Btn{
+    background-color: #3685E4 !important;
+    font-size : 12px !important;
+    font-weight: bold;
+}
+
+.g2Btn{
+    background-color: #F45A87 !important;
+    font-size : 12px !important;
+    font-weight: bold;
+}
+
+.g3Btn{
+    background-color: #58C470 !important;
+    font-size : 12px !important;
+    font-weight: bold;
+}
+
+.opBtn{
+    font-size : 12px !important;
+    font-weight : bold;
 }
