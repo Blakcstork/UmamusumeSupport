@@ -1,7 +1,9 @@
-import SearchInput from "./searchInput";
+import {useState} from "react"
+import DetailRaceInfo from "./DetailRaceInfo";
 import styles from "../css/RaceContent.module.css"
 import DetailSearch from "./detailSearch";
 import dummy from "../tempServer/race.json"
+import GradeButton from "./GradeButton";
 
 
 
@@ -15,10 +17,11 @@ function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
                 this is image
             </div>
             {
-                grade === "G1" ? <button id={styles.smallBtn} className={styles.g1Btn}>GⅠ</button> :
-                grade === "G2" ? <button id={styles.smallBtn} className={styles.g2Btn}>GⅡ</button> :
-                grade === "G3" ? <button id={styles.smallBtn} className={styles.g3Btn}>GⅢ</button> : 
-                grade === "OP" ? <button id={styles.smallBtn} className={styles.opBtn}>{grade}</button> : <button id={styles.smallBtn}>{grade}</button>
+                <GradeButton 
+                grade={grade}
+                width = "40"
+                height = "40"
+                />
             }
             <div>
                 <p>{name}</p>
@@ -32,7 +35,8 @@ function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
                         distance >= 2401 ? "장거리" : "error"
                     }</li>
                     <li>{
-                        type === "grass" ? "잔디" : "더트"
+                        type === "grass" ? "잔디" :
+                        type === "dirt" ? "더트" : "error"
                     }</li>
                     <li>{curve}</li>
                     <li>+{fan}</li>
@@ -44,54 +48,43 @@ function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
 }
 
 
-function DetailRaceInfo(){
-    return(
-        
-        <div className={styles.detailRaceInfo}>
-            <div>
-                Race Image
-            </div>
-            <table  className = {styles.infoTable}>
-                <tbody>
-                <tr>
-                    <td>시기</td>
-                    <td>n월 전반</td>
-                </tr>
-                <tr>
-                    <td>등급</td>
-                    <td><button>G3</button></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
-            <div>
-                Track Image
-            </div>
-        </div>
-    )
-}
-
-
 
 
 function RaceContent(){
-    console.log(dummy);
+
+    const [text, setText] = useState("");
+
+    const onChange = (e) => {
+        setText(e.target.value);
+    }
+
+
+
+    const newArray = dummy.filter((e) => e.name.includes(text));
+
 
 
     return(
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
-            <SearchInput />
+            <div>
+            <form>
+                <input type = "text" 
+                placeholder="please type input" 
+                className={styles.search}
+                onChange = {onChange}
+                value = {text}
+                
+                />
+                <button type = "submit"> Go </button>
+            </form>
+            </div>
             <DetailSearch />
-            <DetailRaceInfo />
             <div>
             <ul>
                 {
                     
-                    dummy.map((race) =>
+                    newArray.map((race) =>
                         <li>
                             <RaceList
                             coverImg={race.img}

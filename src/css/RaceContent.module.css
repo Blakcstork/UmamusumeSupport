@@ -64,54 +64,30 @@
 
 
 
-.detailRaceInfo{
-    display : flex;
 
-    width : 500px;
-    height : 600px;
+
+.search {
+    width: 254px;
+    height: 38px;
+    margin: 0 36px 30px 26px;
+    padding: 1px 10px 1px 10px;
+    border : none;
+    border-radius: 10px;
+    background-color: #ececec;
     
-    background-color : white;
-    border : 1px;
-    border-radius : 12px;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8f8b8b;
+
 }
 
 
-.infoTable{
-    border : 1px solid black;
-}
 
 
 
-
-#smallBtn{
-    width : 40px;
-    height : 40px;
-    border :none;
-    border-radius : 15px;
-    font-size : 10px;
-    font-family : Hanna;
-    background-color : #EFAB3E;
-}
-
-.g1Btn{
-    background-color: #3685E4 !important;
-    font-size : 12px !important;
-    font-weight: bold;
-}
-
-.g2Btn{
-    background-color: #F45A87 !important;
-    font-size : 12px !important;
-    font-weight: bold;
-}
-
-.g3Btn{
-    background-color: #58C470 !important;
-    font-size : 12px !important;
-    font-weight: bold;
-}
-
-.opBtn{
-    font-size : 12px !important;
-    font-weight : bold;
-}
