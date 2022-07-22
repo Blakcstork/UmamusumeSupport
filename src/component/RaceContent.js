@@ -53,11 +53,11 @@ function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
 function RaceContent(){
 
     const [text, setText] = useState("");
+    const [con, setCon] = useState([]);
 
     const onChange = (e) => {
         setText(e.target.value);
     }
-
 
 
     const newArray = dummy.filter((e) => e.name.includes(text));
