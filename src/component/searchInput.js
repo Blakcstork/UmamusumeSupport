@@ -6,9 +6,8 @@ import styles from "../css/searchInput.module.css"
 
 
 
-function SearchInput({searchType}){
+function SearchInput({searchText}){
     const [text, setText] = useState("");
-    const [dum, setDum] = useState([]);
 
     const onChange = (e) => {
         setText(e.target.value);

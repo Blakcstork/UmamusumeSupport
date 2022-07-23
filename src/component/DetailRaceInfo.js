@@ -1,4 +1,4 @@
-import styles from "../css/DetailraceInfo.module.css"
+import styles from "../css/DetailRaceInfo.module.css"
 import GradeButton from "./GradeButton"
 
 
