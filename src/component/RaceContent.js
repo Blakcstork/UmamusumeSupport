@@ -116,15 +116,10 @@ function DetailSearch(){
 function RaceContent(){
 
 
-    let sText = "";
 
     const [text, setText] = useState("");
-    const [con, setCon] = useState([]);
+    const [array, setArray] = useState([]);
     let isDetailOpen = true;
-
-    const searchText = (t) => {
-        sText = t;
-    }
 
 
 
@@ -142,12 +137,11 @@ function RaceContent(){
 
 
 
-
     return(
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <div>
-            <SearchInput sText = {searchText(sText)}/>
+            <SearchInput setData = {setArray}/>
             <form>
                 <input type = "text" 
                 placeholder="please type input" 
@@ -164,6 +158,7 @@ function RaceContent(){
                 isDetailOpen ? <DetailSearch /> : null
             }
             <div>
+            <button onClick = {() => {console.log(array)}}>click!</button>
             <ul>
                 {
                     

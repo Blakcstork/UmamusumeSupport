@@ -6,20 +6,27 @@ import styles from "../css/searchInput.module.css"
 
 
 
-function SearchInput({searchText}){
+function SearchInput({setData}){
     const [text, setText] = useState("");
 
     const onChange = (e) => {
         setText(e.target.value);
+        const newArray = dummy.filter((e) => e.name.includes(text));
+        setData(newArray);
+        console.log(newArray);
     }
 
 
 
-    const newArray = dummy.filter((e) => e.name.includes(text));
+
+
+    
+
     
 
 
     return(
+
         <div>
             <form>
                 <input type = "text" 
@@ -30,7 +37,6 @@ function SearchInput({searchText}){
                 
                 />
                 <button type = "submit"> Go </button>
-                {console.log(newArray)}
             </form>
         </div>
     )
