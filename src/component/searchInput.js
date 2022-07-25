@@ -11,18 +11,8 @@ function SearchInput({setData}){
 
     const onChange = (e) => {
         setText(e.target.value);
-        const newArray = dummy.filter((e) => e.name.includes(text));
-        setData(newArray);
-        console.log(newArray);
+        setData(e.target.value);
     }
-
-
-
-
-
-    
-
-    
 
 
     return(
