@@ -2,7 +2,7 @@ import styles from "../css/DetailRaceInfo.module.css"
 import GradeButton from "./GradeButton"
 
 
-function DetailRaceInfo(){
+function DetailRaceInfo({name, month, day, period, distance, type, grade, place, curve, require, fan, gate, img}){
     return(
         
         <div className={styles.detailRaceInfo}>
