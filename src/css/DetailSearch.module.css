@@ -1,19 +1,1 @@
-.detailRaceInfo{
-    display : flex;
 
-    width : 500px;
-    height : 600px;
-    
-    background-color : white;
-    border : 1px;
-    border-radius : 12px;
-}
-
-
-.infoTable{
-    width : 200px;
-    height : 100px;
-    border : 1px solid black;
-    font-size : 12px;
-
-}

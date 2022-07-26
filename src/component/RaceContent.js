@@ -2,11 +2,13 @@ import {useState} from "react"
 import DetailRaceInfo from "./DetailRaceInfo.js";
 import SearchInput from "./searchInput.js";
 import DetailSearch from "./detailSearch.js";
-import styles from "../css/RaceContent.module.css"
-import dummy from "../tempServer/race.json"
 import GradeButton from "./GradeButton.js";
+import ModalExample from "./ModalExample.js";
 
+import styles from "../css/RaceContent.module.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import dummy from "../tempServer/race.json"
 
 
 
@@ -14,6 +16,7 @@ import GradeButton from "./GradeButton.js";
 function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
     return (
         <div className={styles.raceList}>
+            
             <div className = {styles.raceImage}>
                 this is image
             </div>
@@ -62,6 +65,8 @@ function RaceContent(){
     const [array, setArray] = useState([]);
     const [detailOpen, setDetailOpen] = useState(false);
 
+    const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
+
 
     const toggleDetail = () => {
         setDetailOpen(!detailOpen);
@@ -69,14 +74,32 @@ function RaceContent(){
     } 
 
 
+    const onClick = (e, params) => {
+        setPopup({open: true, title : params.name, message : "Hello!", params : params})
+        console.log(e);
+        console.log(params);
+    }
+
+    const openPopup = (e) => {
+        setPopup({open: true, title: "Hello", message : "Hello Sucker" })
+    }
+
+
     const newArray = dummy.filter((e) => e.name.includes(data));
     const newArray2 = dummy.filter((e)=> e.type === array[1] && e.period === array[2])
+
+
+
+
+    
 
 
 
     return(
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
+            <button onClick={openPopup}>Popup ON</button>
+            <ModalExample open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} params = {popup.params}/>
             <div>
             <SearchInput setData = {setData}/>
             </div>
@@ -91,7 +114,7 @@ function RaceContent(){
                     detailOpen ? 
                     
                     newArray2.map((race) =>
-                        <li>
+                        <li onClick={(e) => {onClick(e, race)}}>
                             <RaceList
                             coverImg={race.img}
                             name = {race.name}
@@ -107,7 +130,7 @@ function RaceContent(){
 
                     :
                     newArray.map((race) =>
-                        <li>
+                        <li onClick={(e) => {onClick(e, race)}}>
                             <RaceList
                             coverImg={race.img}
                             name = {race.name}

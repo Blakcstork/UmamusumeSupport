@@ -20,18 +20,20 @@
 .contents > div > ul{
     list-style: none;
     margin-left : 10%;
+    margin-right : 13%;
+    padding : 5% 10%;
 }
 
 .contents > div > ul > li {
-    margin-bottom : 20px;
+    margin-bottom : 30px;
 }
 
 .raceList{
     display : flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width : 70%;
-    height : 70px;
+    width : 100%;
+    height : 100px;
     padding : 10px 29px;
     background-color: #ececec;
     border-radius: 10px;

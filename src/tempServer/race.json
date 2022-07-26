@@ -1782,8 +1782,146 @@
         "fan" : 2200,
         "gate" : 16,
         "img" : ""       
+    },
+
+
+
+
+    {
+        "name" : "재팬 더트 더비",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 2000,
+        "type" : "dirt",
+        "grade" : "G1",
+        "place" : "오이",
+        "curve" : "right",
+        "require" : 4000,        
+        "fan" : 4500,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "CBC상",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "츄코",
+        "curve" : "left",
+        "require" : 1250,        
+        "fan" : 3900,
+        "gate" : 18,
+        "img" : ""       
+    },
+    {
+        "name" : "프로시온 스테이크스",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1400,
+        "type" : "dirt",
+        "grade" : "G3",
+        "place" : "츄코",
+        "curve" : "left",
+        "require" : 1000,        
+        "fan" : 3600,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "칠석상",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 2000,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "후쿠시마",
+        "curve" : "right",
+        "require" : 1500,        
+        "fan" : 4100,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "하코다테 기념",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 2000,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "하코다테",
+        "curve" : "right",
+        "require" : 1500,        
+        "fan" : 4100,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "라디오 NIKKEI상",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "후쿠시마",
+        "curve" : "right",
+        "require" : 1250,        
+        "fan" : 3800,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "토모에상",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "하코다테",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2400,
+        "gate" : 16,
+        "img" : ""       
+    },
+    {
+        "name" : "마린 스테이크스",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1700,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "하코다테",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 14,
+        "img" : ""       
+    },
+    {
+        "name" : "나고야 철도배",
+        "month" : 7,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "츄코",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 2300,
+        "gate" : 16,
+        "img" : ""       
     }
 
 
-    
 ]
