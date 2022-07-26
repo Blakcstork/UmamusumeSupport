@@ -60,17 +60,19 @@ function RaceContent(){
 
     const [data, setData] = useState("");
     const [array, setArray] = useState([]);
+    const [dum, setDum] = useState(dummy);
     const [detailOpen, setDetailOpen] = useState(false);
 
 
     const toggleDetail = () => {
         setDetailOpen(!detailOpen);
         console.log(detailOpen);
-    } 
+    }
+    
 
 
     const newArray = dummy.filter((e) => e.name.includes(data));
-    const newArray2 = dummy.filter((e)=> e.type === array[1] && e.period === array[2])
+    const newArray2 = dummy.filter((e)=> e.type.includes(array[1]))
 
 
 
@@ -78,14 +80,13 @@ function RaceContent(){
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <div>
-            <SearchInput setData = {setData}/>
+
+            { detailOpen ? null : <SearchInput setData = {setData}/>}
             </div>
             <button onClick={() => {toggleDetail()}}>상세 검색</button>
-            {
-                detailOpen ? <DetailSearch setArray = {setArray}/> : null
-            }
+            { detailOpen ? <DetailSearch setArray = {setArray}/> : null}
             <div>
-            <button onClick = {() => {console.log(array)}}>click!</button>
+            <button onClick = {() => {console.log(newArray2, array)}}>click!</button>
             <ul>
                 {
                     detailOpen ? 

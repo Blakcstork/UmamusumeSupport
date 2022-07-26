@@ -5,25 +5,24 @@ import dummy from "../tempServer/race.json"
 
 
 
-
 function DetailSearch({setArray}){
     
     const [list, setList] = useState([]);
 
     const onChange = (e) => {
-        if(e.name === "distance") {
+        if(e.target.name === "distance") {
         const newList = list;
         newList[0] = e.target.value;
         setList(newList);
         console.log(list);
 
         }
-        else if(e.name === "ground") {
+        else if(e.target.name === "ground") {
             const newList = list;
             newList[1] = e.target.value;
             console.log(list);
         }
-        else if(e.name === "season"){
+        else if(e.target.name === "season"){
             const newList = list;
             newList[2] = e.target.value;
             console.log(list);                
@@ -32,6 +31,7 @@ function DetailSearch({setArray}){
         setArray(list);
 
     }
+
 
 
     return (
