@@ -1,0 +1,12 @@
+[
+    {
+        "name" : "호선의 프로페서",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "코너에 능숙해져 속도가 상승한다.",
+        "cost" : 360,
+        "img" : ""
+    }
+]
