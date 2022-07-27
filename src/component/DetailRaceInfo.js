@@ -18,7 +18,7 @@ function DetailRaceInfo({name, month, day, period, distance, type, grade, place,
                     </tr>
                     <tr>
                         <td>시기</td>
-                        <td>n월 전반</td>
+                        <td>{month}월 {day}반</td>
                     </tr>
                     <tr>
                         <td>등급</td>

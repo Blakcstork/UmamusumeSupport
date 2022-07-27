@@ -63,6 +63,7 @@ function RaceContent(){
 
     const [data, setData] = useState("");
     const [array, setArray] = useState([]);
+    const [info, setInfo] = useState([]);
     const [detailOpen, setDetailOpen] = useState(false);
 
     const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
@@ -75,7 +76,8 @@ function RaceContent(){
 
 
     const onClick = (e, params) => {
-        setPopup({open: true, title : params.name, message : "Hello!", params : params})
+        setInfo([params.name, params.month, params.day, params.period, params.distance, params.type, params.grade, params.place, params.curve, params.require, params.fan, params.gate, params.img])
+        setPopup({open: true, title : params.name, message : "Hello!", info : info})
         console.log(e);
         console.log(params);
     }
@@ -99,7 +101,7 @@ function RaceContent(){
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <button onClick={openPopup}>Popup ON</button>
-            <ModalExample open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} params = {popup.params}/>
+            <ModalExample open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} />
             <div>
             <SearchInput setData = {setData}/>
             </div>

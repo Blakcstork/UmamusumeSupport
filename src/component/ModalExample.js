@@ -3,9 +3,11 @@ import Button from 'react-bootstrap/Button';
 
 import DetailRaceInfo from './DetailRaceInfo';
 
-function ModalExample({open, setPopup, message, title, callback, params}) {
+function ModalExample({open, setPopup, message, title, callback, info}) {
+    const newArray = info;
     const handleClose = () => {
       setPopup({open: false});
+      console.log(newArray);
       if(callback){
         callback();
       }
