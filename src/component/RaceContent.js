@@ -1,8 +1,7 @@
 import {useState} from "react"
-import DetailRaceInfo from "./DetailRaceInfo.js";
 import SearchInput from "./searchInput.js";
 import DetailSearch from "./detailSearch.js";
-import GradeButton from "./GradeButton.js";
+import {GradeButton} from "./GradeButton.js";
 import ModalExample from "./ModalExample.js";
 
 import styles from "../css/RaceContent.module.css"
@@ -29,6 +28,7 @@ function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
             }
             <div>
                 <p>{name}</p>
+                <button>{require}</button> <button>+{fan}</button>
             </div>
             <div className={styles.raceDetail}>
                 <ul>
@@ -77,9 +77,7 @@ function RaceContent(){
 
     const onClick = (e, params) => {
         setInfo([params.name, params.month, params.day, params.period, params.distance, params.type, params.grade, params.place, params.curve, params.require, params.fan, params.gate, params.img])
-        setPopup({open: true, title : params.name, message : "Hello!", info : info})
-        console.log(e);
-        console.log(params);
+        setPopup({open: true, title : params.name, message : "Hello!"})
     }
 
     const openPopup = (e) => {
@@ -88,7 +86,7 @@ function RaceContent(){
 
 
     const newArray = dummy.filter((e) => e.name.includes(data));
-    const newArray2 = dummy.filter((e)=> e.type === array[1] && e.period === array[2])
+    const newArray2 = dummy.filter((e)=> e.type.includes(array[1]) && e.period.includes(array[2]))
 
 
 
@@ -101,13 +99,13 @@ function RaceContent(){
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <button onClick={openPopup}>Popup ON</button>
-            <ModalExample open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} />
+            <ModalExample open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
             <SearchInput setData = {setData}/>
             </div>
             <button onClick={() => {toggleDetail()}}>상세 검색</button>
             {
-                detailOpen ? <DetailSearch setArray = {setArray}/> : null
+                detailOpen ? <DetailSearch setArray = {setArray} /> : null
             }
             <div>
             <button onClick = {() => {console.log(array)}}>click!</button>
