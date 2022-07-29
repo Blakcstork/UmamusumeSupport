@@ -15,6 +15,7 @@ function SearchInput({setData}){
     }
 
 
+
     return(
 
         <div>
@@ -23,8 +24,7 @@ function SearchInput({setData}){
                 placeholder="please type input" 
                 className={styles.search}
                 onChange = {onChange}
-                value = {text}
-                
+                value = {text}                
                 />
                 <button type = "submit"> Go </button>
             </form>

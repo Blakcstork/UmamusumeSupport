@@ -7,7 +7,6 @@ import styles from "../css/DetailSearch.module.css"
 
 
 
-
 function DetailSearch({setArray}){
     
     const [list, setList] = useState([]);
@@ -15,20 +14,24 @@ function DetailSearch({setArray}){
     const onChange = (e) => {
         console.log(e);
         if(e.target.name === "distance") {
-        let newList = list;
-        newList[0] = e.target.value;
-        setList({...newList});
-        console.log(list);
+          let newList = list;
+        if(e.target.name === "distance") {
+          const newList = list;
+          newList[0] = e.target.value;
+          setList({...newList});
+          console.log(list);
 
         }
         else if(e.target.name === "ground") {
             let newList = list;
+            const newList = list;
             newList[1] = e.target.value;
             setList({...newList});
             console.log(list);
         }
         else if(e.target.name === "season"){
             let newList = list;
+            const newList = list;
             newList[2] = e.target.value;
             setList({...newList});
             console.log(list);                
@@ -37,6 +40,7 @@ function DetailSearch({setArray}){
         setArray(list);
 
     }
+
 
 
     return (

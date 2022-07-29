@@ -64,6 +64,7 @@ function RaceContent(){
     const [data, setData] = useState("");
     const [array, setArray] = useState([]);
     const [info, setInfo] = useState([]);
+
     const [detailOpen, setDetailOpen] = useState(false);
 
     const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
@@ -72,7 +73,8 @@ function RaceContent(){
     const toggleDetail = () => {
         setDetailOpen(!detailOpen);
         console.log(detailOpen);
-    } 
+    }
+    
 
 
     const onClick = (e, params) => {
@@ -91,6 +93,7 @@ function RaceContent(){
 
 
 
+
     
 
 
@@ -101,14 +104,15 @@ function RaceContent(){
             <button onClick={openPopup}>Popup ON</button>
             <ModalExample open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
-            <SearchInput setData = {setData}/>
+
+            { detailOpen ? null : <SearchInput setData = {setData}/>}
             </div>
             <button onClick={() => {toggleDetail()}}>상세 검색</button>
-            {
-                detailOpen ? <DetailSearch setArray = {setArray} /> : null
-            }
+
+            { detailOpen ? <DetailSearch setArray = {setArray}/> : null}
+
             <div>
-            <button onClick = {() => {console.log(array)}}>click!</button>
+            <button onClick = {() => {console.log(newArray2, array)}}>click!</button>
             <ul>
                 {
                     detailOpen ? 
