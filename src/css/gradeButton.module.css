@@ -1,11 +1,23 @@
-#smallBtn{
-    width : 40px;
-    height : 40px;
+#bigBtn{
+    width : 50px;
+    height : 30px;
     border :none;
-    border-radius : 15px;
+    border-radius : 12px;
     font-size : 10px;
     font-family : Hanna;
     background-color : #EFAB3E;
+}
+
+#smallBtn{
+    width : 40px;
+    height : 20px;
+    border:none;
+    border-radius : 15px;
+    color:#FFFFFF;
+    font-size : 8px;
+    font-family:Hanna;
+    background-color: #EFAB3E;
+
 }
 
 .g1Btn{

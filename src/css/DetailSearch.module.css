@@ -1,1 +1,16 @@
+.searchTable{
+    width : 60%;
+    height : 20%;
+    text-align: center;
+}
+
+.searchTable > tbody > tr > td:first-child{
+    background-color: antiquewhite;
+
+}
+
+.searchTable > tbody > tr > td:last-child{
+    background-color: white;
+}
+
 
