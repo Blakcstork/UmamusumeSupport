@@ -1,4 +1,4 @@
-import {useState, useInput} from "react"
+import {useState} from "react"
 import dummy from "../tempServer/race.json"
 
 import styles from "../css/DetailSearch.module.css"
@@ -14,23 +14,19 @@ function DetailSearch({setArray}){
     const onChange = (e) => {
         console.log(e);
         if(e.target.name === "distance") {
-          let newList = list;
-        if(e.target.name === "distance") {
           const newList = list;
           newList[0] = e.target.value;
-          setList({...newList});
+          setList({...newList}); //... 붙이면 해제했다가 다시 붙이는 것
           console.log(list);
 
         }
         else if(e.target.name === "ground") {
-            let newList = list;
             const newList = list;
             newList[1] = e.target.value;
             setList({...newList});
             console.log(list);
         }
         else if(e.target.name === "season"){
-            let newList = list;
             const newList = list;
             newList[2] = e.target.value;
             setList({...newList});
@@ -38,6 +34,7 @@ function DetailSearch({setArray}){
         }
 
         setArray(list);
+        
 
     }
 
@@ -80,6 +77,7 @@ function DetailSearch({setArray}){
         </form>
         </div>
     )
+
 }
 
 export default DetailSearch;

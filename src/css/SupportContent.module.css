@@ -4,3 +4,18 @@
     background-color: #d9d9d9;
     overflow-y: scroll;
 }
+
+.typeButton {
+    width : 30px;
+    height : 30px;
+    filter: brightness(60%);
+    margin-right : 10px;
+}
+
+.typeButton:hover{
+    filter:brightness(100%);
+}
+
+.clicked {
+    filter: brightness(100%);
+}
