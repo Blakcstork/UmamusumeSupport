@@ -6,9 +6,462 @@
         "nickname" : "다가오는 열기에 떠밀려",
         "type" : "speed",
         "rarity" : "SSR",
-        "img" : "",
-        "events" : [
+        "distanceType" : ["장거리"],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "마치카네 탄호이저",
+        "nickname" : "Jusk keep going.",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["장거리", "중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "사토노 다이아몬드",
+        "nickname" : "그 뒷모습을 넘어서",
+        "type" : "stamina",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "메지로 파머",
+        "nickname" : "바보라고 비웃어 봐",
+        "type" : "gonjo",
+        "rarity" : "SSR",
+        "distanceType" : ["장거리"],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "트윈 터보",
+        "nickname" : "터보 엔진 전개 선언!",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["마일"],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "스페셜 위크",
+        "nickname" : "저녁놀은 동경의 색",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리","장거리"],
+        "runType" : ["선행","선입"],
+        "img" : ""
+    },
+    {
+        "name" : "오구리 캡",
+        "nickname" : "『사랑받는 존재가 되어다오』",
+        "type" : "power",
+        "rarity" : "SSR",
+        "distanceType" : ["마일","중거리"],
+        "runType" : ["선행","선입"],
+        "img" : ""
+    },
+    {
+        "name" : "라이스 샤워",
+        "nickname" : "『행복』이 흩날릴 때",
+        "type" : "stamina",
+        "rarity" : "SSR",
+        "distanceType" : ["장거리"],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "메지로 맥퀸",
+        "nickname" : "『에이스』로서",
+        "type" : "stamina",
+        "rarity" : "SSR",
+        "distanceType" : ["장거리"],
+        "runType" : ["도주","선행"],
+        "img" : ""
+    },
+    {
+        "name" : "하야카와 타즈나",
+        "nickname" : "트레센 학원에 어서오세요!",
+        "type" : "friend",
+        "rarity" : "SSR",
+        "distanceType" : ["마일"],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "비코 페가수스",
+        "nickname" : "필살! 더블 캐럿 펀치!",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["단거리","마일"],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "하루 우라라",
+        "nickname" : "화창~한 휴일",
+        "type" : "gonjo",
+        "rarity" : "SSR",
+        "distanceType" : [""],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "니시노 플라워",
+        "nickname" : "아직 작은 꽃봉오리지만",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["마일"],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "스마트 팔콘",
+        "nickname" : "이것이 나의 우마돌의 길☆",
+        "type" : "power",
+        "rarity" : "SSR",
+        "distanceType" : [""],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "사쿠라 바쿠신 오",
+        "nickname" : "빠르다! 맛있다! 빠르다!",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["단거리"],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "슈퍼 크릭",
+        "nickname" : "한 알의 평온",
+        "type" : "stamina",
+        "rarity" : "SSR",
+        "distanceType" : ["장거리"],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "골드 시티",
+        "nickname" : "Run(my)way",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["마일"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "에어 샤커",
+        "nickname" : "7cm의 너머로",
+        "type" : "knowledge",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리","장거리"],
+        "runType" : ["추입"],
+        "img" : ""
+    },
+    {
+        "name" : "위닝 티켓",
+        "nickname" : "B · N · Winner!!",
+        "type" : "gonjo",
+        "rarity" : "SSR",
+        "distanceType" : [""],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "아이네스 후진",
+        "nickname" : "뛰쳐나와, 반짝여라",
+        "type" : "gonjo",
+        "rarity" : "SSR",
+        "distanceType" : ["마일","중거리"],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "파인 모션",
+        "nickname" : "감사는 손끝까지 담아서",
+        "type" : "knowledge",
+        "rarity" : "SSR",
+        "distanceType" : [""],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "타마모 크로스",
+        "nickname" : "하늘도 갈라버리는 번개 소녀!",
+        "type" : "stamina",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "엘 콘도르 파사",
+        "nickname" : "패션 챔피오나!",
+        "type" : "power",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리"],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "그래스 원더",
+        "nickname" : "천자만홍에 섞이지 않는 한 송이",
+        "type" : "gonjo",
+        "rarity" : "SSR",
+        "distanceType" : ["마일","중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "보드카",
+        "nickname" : "로드 · 오브 · 보드카",
+        "type" : "power",
+        "rarity" : "SSR",
+        "distanceType" : ["마일","중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "골드 쉽",
+        "nickname" : "불침함의 진격",
+        "type" : "stamina",
+        "rarity" : "SSR",
+        "distanceType" : ["장거리"],
+        "runType" : ["추입"],
+        "img" : ""
+    },
+    {
+        "name" : "토카이 테이오",
+        "nickname" : "꿈은 내걸으라고 있는 거야!",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리"],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "사일런스 스즈카",
+        "nickname" : "빛나는 경치, 그 너머에",
+        "type" : "speed",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리"],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "스페셜 위크",
+        "nickname" : "일본 최고의 무대를",
+        "type" : "gonjo",
+        "rarity" : "SSR",
+        "distanceType" : ["중거리","장거리"],
+        "runType" : ["선행","선입"],
+        "img" : ""
+    },
 
-        ]
+
+
+
+    {
+        "name" : "나이스 네이처",
+        "nickname" : "순진천진난만",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["중거리","장거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "이쿠노 딕터스",
+        "nickname" : "준비운동은 게을리하지 말 것",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["중거리"],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "키류인 아오이",
+        "nickname" : "함께 같은 길을!",
+        "type" : "friend",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "나이스 네이처",
+        "nickname" : "…그냥 물방울이라니까요",
+        "type" : "gonjo",
+        "rarity" : "SR",
+        "distanceType" : ["중거리" ,"장거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "나이스 네이처",
+        "nickname" : "순진천진난만",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["중거리","장거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "메지로 도베르",
+        "nickname" : "시선은 신경쓰지 말고",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["중거리","마일"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "메이쇼 도토",
+        "nickname" : "행복을 등지고",
+        "type" : "gonjo",
+        "rarity" : "SR",
+        "distanceType" : ["중거리"],
+        "runType" : ["선행","선입"],
+        "img" : ""
+    },
+    {
+        "name" : "마치카네 후쿠키타루",
+        "nickname" : "운의 행방",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "마블러스 선데이",
+        "nickname" : "마블러스☆대작전",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "나리타 타이신",
+        "nickname" : "물결치는 기분",
+        "type" : "speed",
+        "rarity" : "SR",
+        "distanceType" : ["장거리"],
+        "runType" : ["추입"],
+        "img" : ""
+    },
+    {
+        "name" : "에이신 플래시",
+        "nickname" : "0500 · 정각대로",
+        "type" : "speed",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "아그네스 타키온",
+        "nickname" : "생체 A에 관한 실험적 연구",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "유키노 비진",
+        "nickname" : "시티걸 입문#",
+        "type" : "gonjo",
+        "rarity" : "SR",
+        "distanceType" : ["중거리"],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "메지로 라이언",
+        "nickname" : "단련하고, 화답하고!",
+        "type" : "power",
+        "rarity" : "SR",
+        "distanceType" : ["중거리"],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "미호노 부르봉",
+        "nickname" : "친구를 철저히 단련",
+        "type" : "power",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : ["도주"],
+        "img" : ""
+    },
+    {
+        "name" : "맨하탄 카페",
+        "nickname" : "비의 독주, 나의 독창",
+        "type" : "stamina",
+        "rarity" : "SR",
+        "distanceType" : ["장거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "마야노 탑건",
+        "nickname" : "귀여움+귀여움은~?",
+        "type" : "stamina",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "아그네스 디지털",
+        "nickname" : "디지털 충전 중+",
+        "type" : "power",
+        "rarity" : "SR",
+        "distanceType" : ["마일","중거리"],
+        "runType" : ["선입"],
+        "img" : ""
+    },
+    {
+        "name" : "에어 그루브",
+        "nickname" : "부회장의 일침",
+        "type" : "gonjo",
+        "rarity" : "SR",
+        "distanceType" : ["중거리"],
+        "runType" : [""],
+        "img" : ""
+    },
+    {
+        "name" : "히시 아마존",
+        "nickname" : "정점에 서라!",
+        "type" : "power",
+        "rarity" : "SR",
+        "distanceType" : [""],
+        "runType" : ["선행","추입"],
+        "img" : ""
+    },
+    {
+        "name" : "다이와 스칼렛",
+        "nickname" : "노력은 배신하지 않아!",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["마일","중거리"],
+        "runType" : ["선행"],
+        "img" : ""
+    },
+    {
+        "name" : "후지 키세키",
+        "nickname" : "나 참, 어서 와",
+        "type" : "knowledge",
+        "rarity" : "SR",
+        "distanceType" : ["마일"],
+        "runType" : ["선행"],
+        "img" : ""
     }
 ]
