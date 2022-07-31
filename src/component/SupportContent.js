@@ -8,12 +8,23 @@ import styles from "../css/SupportContent.module.css"
 import SearchInput from "./searchInput";
 
 
+function SupportList({name, nickname, type, rarity, distanceType, runType, img}){
+    return(
+        <div className={styles.supportList}>
+            <div>{nickname} and {name}</div>
+        </div>
+    )
+}
+
+
 
 function SupportContent() {
 
     const [text, setText] = useState("");
     const [style, setStyle] = useState(`${styles.typeButton}`);
     const [isClicked, setIsClicked] = useState(false);
+
+
 
     const onClick = (e) =>{
         console.log(e);
@@ -32,9 +43,24 @@ function SupportContent() {
                 <img src = "/images/types/i_type3.png" alt = "power" className={style} onClick= {onClick}/>
                 <img src = "/images/types/i_type4.png" alt = "gonjo" className={style} onClick= {onClick}/>
                 <img src = "/images/types/i_type5.png" alt = "knowledge" className={style} onClick= {onClick} />
-                <img src = "/images/types/i_type6.png" alt = "helper" className={style} onClick= {onClick}/>
+                <img src = "/images/types/i_type6.png" alt = "friend" className={style} onClick= {onClick}/>
+            </div>
+            <div>
+                <label><input type="radio" name = "rarity" value = "SSR"/>SSR</label>
+                <label><input type="radio" name = "rarity" value = "SR"/>SR</label>
+                <label><input type="radio" name = "rarity" value = "R"/>R</label>
             </div>
             <SearchInput setData={setText}/>
+            <div className={styles.supportListDiv}>
+                    {
+                        supportDummy.map((e) => 
+                            <div>
+                            <SupportList name = {e.name} nickname = {e.nickname}/>
+                            </div>
+                        )
+                    }
+
+            </div>
         </div>
     )
 }
