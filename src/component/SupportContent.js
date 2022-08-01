@@ -1,11 +1,12 @@
 import { useState } from "react";
-
+import SearchInput from "./searchInput.js";
+import DetailSupportModal from "./DetailSupportModal.js";
 
 import skillDummy from "../tempServer/skill.json"
 import supportDummy from "../tempServer/support.json"
 
 import styles from "../css/SupportContent.module.css"
-import SearchInput from "./searchInput";
+
 
 
 function SupportList({name, nickname, type, rarity, distanceType, runType, img}){
@@ -23,6 +24,7 @@ function SupportContent() {
     const [text, setText] = useState("");
     const [style, setStyle] = useState(`${styles.typeButton}`);
     const [isClicked, setIsClicked] = useState(false);
+    const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
 
 
 
@@ -33,10 +35,15 @@ function SupportContent() {
         const newArray = supportDummy.filter((d) => d.type.includes(e.target.alt))
     }
 
+    const onClickList = (e, support) => {
+        setPopup({open: true, title : `${support.name}, ${support.nickname}`, message : "Hello!"})
+    }
+
 
     return(
         <div className={styles.contents}>
             <p>도-모. 서포트 내용입니다.</p>
+            <DetailSupportModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback}/>
             <div>
                 <img src = "/images/types/i_type1.png" alt = "speed" className={style} onClick= {onClick}/>
                 <img src = "/images/types/i_type2.png" alt = "stamina" className={style} onClick= {onClick}/>
@@ -53,9 +60,9 @@ function SupportContent() {
             <SearchInput setData={setText}/>
             <div className={styles.supportListDiv}>
                     {
-                        supportDummy.map((e) => 
-                            <div>
-                            <SupportList name = {e.name} nickname = {e.nickname}/>
+                        supportDummy.map((support) => 
+                            <div onClick = {(e)=> {onClickList(e, support)}}>
+                            <SupportList name = {support.name} nickname = {support.nickname}/>
                             </div>
                         )
                     }

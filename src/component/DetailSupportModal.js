@@ -17,6 +17,9 @@ function DetailSupportModal({open, setPopup, message, title, callback, info}) {
           </Modal.Header>
           <Modal.Body>
             {message}
+            <div>
+              
+            </div>
             
             </Modal.Body>
           <Modal.Footer>
