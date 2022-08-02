@@ -1,0 +1,22 @@
+.planTable{
+    border-collapse: separate;
+    border-spacing : 10px 15px;
+    text-align: center;
+    background-color: #d1e970;
+}
+
+.planTable tbody > tr > td{
+    padding : 0px;
+}
+
+
+.pContents > td {
+    width : 70px;
+    height : 50px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pNames > td{
+}

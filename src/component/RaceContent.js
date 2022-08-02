@@ -3,6 +3,7 @@ import SearchInput from "./searchInput.js";
 import DetailSearch from "./detailSearch.js";
 import {GradeButton} from "./GradeButton.js";
 import DetailRaceModal from "./DetailRaceModal.js";
+import RacePlanner from "./RacePlanner.js";
 
 import styles from "../css/RaceContent.module.css"
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -101,6 +102,7 @@ function RaceContent(){
     return(
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
+            <RacePlanner />
             <button onClick={openPopup}>Popup ON</button>
             <DetailRaceModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
