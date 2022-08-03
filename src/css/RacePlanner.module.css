@@ -1,8 +1,9 @@
 .planTable{
     border-collapse: separate;
-    border-spacing : 10px 15px;
+    border-spacing : 10px 3px;
     text-align: center;
     background-color: #d1e970;
+    padding : 20px;
 }
 
 .planTable tbody > tr > td{
@@ -16,6 +17,15 @@
     background-color: white;
     border-radius: 10px;
     text-align: center;
+}
+
+.pContents > td:hover{
+    filter:brightness(150%);
+}
+
+.pContents > td > img {
+    width : 20px;
+    height : 20px;
 }
 
 .pNames > td{
