@@ -30,3 +30,16 @@
 
 .pNames > td{
 }
+
+
+
+.littleList{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width : 70%;
+    height : 80px;
+    padding : 10px 29px;
+    background-color: #ececec;
+    border-radius: 10px;
+}

@@ -4,6 +4,7 @@ import DetailSearch from "./detailSearch.js";
 import {GradeButton} from "./GradeButton.js";
 import DetailRaceModal from "./DetailRaceModal.js";
 import RacePlanner from "./RacePlanner.js";
+import {RaceList} from "./RaceList.js";
 
 import styles from "../css/RaceContent.module.css"
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,48 +13,13 @@ import dummy from "../tempServer/race.json"
 
 
 
+function SaveButton(onClick){
 
-function RaceList({coverImg, name, grade, distance, require, type, curve, fan}){
-    return (
-        <div className={styles.raceList}>
-            
-            <div className = {styles.raceImage}>
-                this is image
-            </div>
-            {
-                <GradeButton 
-                grade={grade}
-                width = "40"
-                height = "40"
-                />
-            }
-            <div>
-                <p>{name}</p>
-                <button>{require}</button> <button>+{fan}</button>
-            </div>
-            <div className={styles.raceDetail}>
-                <ul>
-                    <li>{
-                        distance >= 1200 && distance < 1600 ? "단거리" : 
-                        distance >= 1600 && distance < 1801 ? "마일" :
-                        distance >= 1801 && distance < 2401 ? "중거리" :
-                        distance >= 2401 ? "장거리" : "error"
-                    }</li>
-                    <li>{
-                        type === "grass" ? "잔디" :
-                        type === "dirt" ? "더트" : "error"
-                    }</li>
-                    <li>{curve}</li>
-                    <li>+{fan}</li>
-                </ul>
-            </div>
+    const [isClicked, setIsClicked] = useState(false);
 
-        </div>
-    )
+
+
 }
-
-
-
 
 
 
@@ -83,6 +49,11 @@ function RaceContent(){
         setPopup({open: true, title : params.name, message : "Hello!"})
     }
 
+    const onClickSave = (e, params) => {
+        sessionStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
+        console.log(sessionStorage.getItem(`${params.month}${params.day}`))
+    }
+
     const openPopup = (e) => {
         setPopup({open: true, title: "Hello", message : "Hello Sucker" })
     }
@@ -103,10 +74,8 @@ function RaceContent(){
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <RacePlanner />
-            <button onClick={openPopup}>Popup ON</button>
             <DetailRaceModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
-
             { detailOpen ? null : <SearchInput setData = {setData}/>}
             </div>
             <button onClick={() => {toggleDetail()}}>상세 검색</button>
@@ -120,7 +89,7 @@ function RaceContent(){
                     detailOpen ? 
                     
                     newArray2.map((race) =>
-                        <li onClick={(e) => {onClick(e, race)}}>
+                        <li>
                             <RaceList
                             coverImg={race.img}
                             name = {race.name}
@@ -130,6 +99,7 @@ function RaceContent(){
                             type = {race.type}
                             curve = {race.curve}
                             fan = {race.fan}
+                            onClick={(e) => {onClick(e, race)}}
                             />
                         </li> 
                     )
@@ -137,7 +107,7 @@ function RaceContent(){
                     :
 
                     newArray.map((race) =>
-                        <li onClick={(e) => {onClick(e, race)}}>
+                        <li>
                             <RaceList
                             coverImg={race.img}
                             name = {race.name}
@@ -147,7 +117,9 @@ function RaceContent(){
                             type = {race.type}
                             curve = {race.curve}
                             fan = {race.fan}
+                            onClick={(e) => {onClick(e, race)}}
                             />
+                            <button onClick = {(e) => {onClickSave(e,race)}}> + </button>
                         </li> 
                     )
 

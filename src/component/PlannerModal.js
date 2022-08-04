@@ -17,9 +17,7 @@ function PlannerModal({open, setPopup, message, title, callback}) {
           </Modal.Header>
           <Modal.Body>
             {message}
-            <div>
-              
-            </div>
+          
             
             </Modal.Body>
           <Modal.Footer>

@@ -1,31 +1,88 @@
 import {useState} from "react";
-import PlannerModal from "./PlannerModal.js";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
+import {SmallRaceList, RaceList} from "./RaceList";
 
 import styles from "../css/RacePlanner.module.css";
 import dummy from "../tempServer/race.json";
 
 
 
-function LittleRaceList({img, name, }){
+function PlannerModal({open, setPopup, message, title, callback, smonth, sday}) {
+    const handleClose = () => {
+      setPopup({open: false});
+      if(callback){
+        callback();
+      }
 
+      console.log(smonth)
+      console.log(newArray3)
+    }
+
+    //const newArray3 = dummy.filter((e) => e.month.includes(smonth) && e.day.includes(sday));
+    const newArray = dummy.filter((e) => e.name.includes("츄쿄"));
+    const newArray3 = dummy.filter((e) => e.month == smonth);
+
+    return (
+      <>
+        <Modal show={open} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>{title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          {
+            newArray3.map((race) => 
+                <div>
+                    <RaceList
+                        coverImg={race.img}
+                        name = {race.name}
+                        grade = {race.grade}
+                        distance = {race.distance}
+                        require = {race.require}
+                        type = {race.type}
+                        curve = {race.curve}
+                        fan = {race.fan}
+                    />
+                </div>
+            )
+          }  
+          
+            
+            </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" onClick={handleClose}>
+              OK
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
 }
+
 
 
 function RacePlanner({season}){
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
+    const [smonth, setMonth] = useState("");
+    const [sday, setDay] = useState("");
 
     const onClick = (e, month, day) => {
         setPopup({open: true, title : `It's race`, message : "Hello!"})
+        setMonth(month);
+        setDay(day);
         console.log(`${month}, ${day}`)
     }
 
 
     return (
         <div>
-            <PlannerModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback}/>
+            <PlannerModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} smonth = {smonth} sday = {sday}/>
             <table  className={styles.planTable}>
                 <thead>
-                    주니어
+                    <tr>
+                        <th>주니어</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr className={styles.pNames}>
