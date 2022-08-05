@@ -107,7 +107,7 @@ function RaceContent(){
                     :
 
                     newArray.map((race) =>
-                        <li>
+                        <li className={styles.contentList}>
                             <RaceList
                             coverImg={race.img}
                             name = {race.name}

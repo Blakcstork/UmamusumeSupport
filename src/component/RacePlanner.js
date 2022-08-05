@@ -21,8 +21,7 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday}) 
     }
 
     //const newArray3 = dummy.filter((e) => e.month.includes(smonth) && e.day.includes(sday));
-    const newArray = dummy.filter((e) => e.name.includes("츄쿄"));
-    const newArray3 = dummy.filter((e) => e.month == smonth);
+    const newArray3 = dummy.filter((e) => e.month === smonth && e.day.includes(sday));
 
     return (
       <>
@@ -33,8 +32,8 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday}) 
           <Modal.Body>
           {
             newArray3.map((race) => 
-                <div>
-                    <RaceList
+                <div className={styles.raceList}>
+                    <SmallRaceList
                         coverImg={race.img}
                         name = {race.name}
                         grade = {race.grade}
@@ -46,9 +45,7 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday}) 
                     />
                 </div>
             )
-          }  
-          
-            
+          }           
             </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
@@ -67,8 +64,10 @@ function RacePlanner({season}){
     const [smonth, setMonth] = useState("");
     const [sday, setDay] = useState("");
 
+    const [isSelected, setIsSelected] = useState([]);
+
     const onClick = (e, month, day) => {
-        setPopup({open: true, title : `It's race`, message : "Hello!"})
+        setPopup({open: true, title : `${month}월 ${day}반`, message : "Hello!"})
         setMonth(month);
         setDay(day);
         console.log(`${month}, ${day}`)

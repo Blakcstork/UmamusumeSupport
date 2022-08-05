@@ -55,11 +55,8 @@ function SmallRaceList({coverImg, name, grade, distance, require, type, curve, f
                 height = "40"
                 />
             }
-            <div>
+            <div className = {styles.smallRaceDetail}>
                 <p>{name}</p>
-                <button>{require}</button> <button>+{fan}</button>
-            </div>
-            <div className={styles.raceDetail}>
                 <ul>
                     <li>{
                         distance >= 1200 && distance < 1600 ? "단거리" : 
@@ -67,11 +64,15 @@ function SmallRaceList({coverImg, name, grade, distance, require, type, curve, f
                         distance >= 1801 && distance < 2401 ? "중거리" :
                         distance >= 2401 ? "장거리" : "error"
                     }</li>
+                    <li>
+                        {distance}m
+                    </li>
                     <li>{
                         type === "grass" ? "잔디" :
                         type === "dirt" ? "더트" : "error"
                     }</li>
                     <li>{curve}</li>
+                    <li>{require}명</li>
                     <li>+{fan}</li>
                 </ul>
             </div>

@@ -33,6 +33,12 @@
 
 
 
+
+.raceList{
+    margin-bottom : 20px;
+}
+
+
 .littleList{
     display : flex;
     flex-wrap: wrap;
