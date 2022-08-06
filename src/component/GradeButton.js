@@ -10,7 +10,7 @@ function GradeButton({grade}){
     )
 }
 
-function GradeButton2({grade}){
+function SmallGradeButton({grade}){
     return(
         grade === "G1" ? <button id={styles.smallBtn} className={styles.g1Btn}>GⅠ</button> :
         grade === "G2" ? <button id={styles.smallBtn} className={styles.g2Btn}>GⅡ</button> :
@@ -20,4 +20,4 @@ function GradeButton2({grade}){
 
 }
 
-export {GradeButton, GradeButton2}
+export {GradeButton, SmallGradeButton}

@@ -1,5 +1,5 @@
 import styles from "../css/DetailRaceInfo.module.css"
-import {GradeButton,GradeButton2} from "./GradeButton"
+import {GradeButton,SmallGradeButton} from "./GradeButton"
 
 
 function DetailRaceInfo({name, month, day, period, distance, type, grade, place, curve, require, fan, gate, img}){
@@ -22,7 +22,7 @@ function DetailRaceInfo({name, month, day, period, distance, type, grade, place,
                     </tr>
                     <tr>
                         <td>등급</td>
-                        <td><GradeButton2 grade = {grade} width = "40" height = "40" /></td>
+                        <td><SmallGradeButton grade = {grade} width = "40" height = "40" /></td>
                     </tr>
                     <tr>
                         <td>거리</td>

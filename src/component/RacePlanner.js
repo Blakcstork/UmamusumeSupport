@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
@@ -6,6 +6,7 @@ import {SmallRaceList, RaceList} from "./RaceList";
 
 import styles from "../css/RacePlanner.module.css";
 import dummy from "../tempServer/race.json";
+import { SmallGradeButton } from "./GradeButton";
 
 
 
@@ -81,7 +82,9 @@ function RacePlanner({season}){
                 <thead>
                     <tr>
                         <th>주니어</th>
+                        <th><button onClick={(e) => {sessionStorage.clear()}}>clear</button></th>
                     </tr>
+                    
                 </thead>
                 <tbody>
                     <tr className={styles.pNames}>
@@ -93,7 +96,7 @@ function RacePlanner({season}){
                         <td>3월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,1,"전")}> <img src = "/images/icons/plus.png" alt="10" /></td>
+                        <td onClick = {(e) => onClick(e,1,"전")}> { sessionStorage.getItem("1전")===null? <img src = "/images/icons/plus.png" alt="10" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("1전")).grade}/>}</td>
                         <td onClick = {(e) => onClick(e,1,"후")}> <img src = "/images/icons/plus.png" alt="11"/> </td>
                         <td onClick = {(e) => onClick(e,2,"전")}> <img src = "/images/icons/plus.png" alt="20"/> </td>
                         <td onClick = {(e) => onClick(e,2,"후")}> <img src = "/images/icons/plus.png" alt="21"/> </td>
