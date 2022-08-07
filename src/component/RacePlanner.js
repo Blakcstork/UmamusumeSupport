@@ -65,13 +65,15 @@ function RacePlanner({season}){
     const [smonth, setMonth] = useState("");
     const [sday, setDay] = useState("");
 
-    const [isSelected, setIsSelected] = useState([]);
-
     const onClick = (e, month, day) => {
         setPopup({open: true, title : `${month}월 ${day}반`, message : "Hello!"})
         setMonth(month);
         setDay(day);
         console.log(`${month}, ${day}`)
+    }
+
+    const isSelected = (e) =>{
+      return (sessionStorage.getItem(e) === null)
     }
 
 
@@ -96,12 +98,12 @@ function RacePlanner({season}){
                         <td>3월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,1,"전")}> { sessionStorage.getItem("1전")===null? <img src = "/images/icons/plus.png" alt="10" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("1전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,1,"후")}> <img src = "/images/icons/plus.png" alt="11"/> </td>
-                        <td onClick = {(e) => onClick(e,2,"전")}> <img src = "/images/icons/plus.png" alt="20"/> </td>
-                        <td onClick = {(e) => onClick(e,2,"후")}> <img src = "/images/icons/plus.png" alt="21"/> </td>
-                        <td onClick = {(e) => onClick(e,3,"전")}> <img src = "/images/icons/plus.png" alt="30"/> </td>
-                        <td onClick = {(e) => onClick(e,3,"후")}> <img src = "/images/icons/plus.png" alt="31"/> </td>
+                        <td onClick = {(e) => onClick(e,1,"전")}> { isSelected("1전") ? <img src = "/images/icons/plus.png" alt="10" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("1전")).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,1,"후")}> { isSelected("1후") ? <img src = "/images/icons/plus.png" alt="11" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("1후")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,2,"전")}> { isSelected("2전") ? <img src = "/images/icons/plus.png" alt="20" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("2전")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,2,"후")}> { isSelected("2후") ? <img src = "/images/icons/plus.png" alt="21" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("2후")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,3,"전")}> { isSelected("3전") ? <img src = "/images/icons/plus.png" alt="30" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("3전")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,3,"후")}> { isSelected("3후") ? <img src = "/images/icons/plus.png" alt="31" /> : <SmallGradeButton grade = {JSON.parse(sessionStorage.getItem("3후")).grade}/>} </td>
                     </tr>
                     <tr className={styles.pNames}>
                         <td>4월 전</td>
