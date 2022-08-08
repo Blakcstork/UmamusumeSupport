@@ -64,6 +64,7 @@ function RacePlanner({season}){
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
     const [smonth, setMonth] = useState("");
     const [sday, setDay] = useState("");
+    const [thisSelected, setThisSelected] = useState(false);
 
     const onClick = (e, month, day) => {
         setPopup({open: true, title : `${month}월 ${day}반`, message : "Hello!"})
@@ -73,6 +74,7 @@ function RacePlanner({season}){
     }
 
     const isSelected = (e) =>{
+      console.log("Hello!")
       return (sessionStorage.getItem(e) === null)
     }
 
@@ -84,7 +86,7 @@ function RacePlanner({season}){
                 <thead>
                     <tr>
                         <th>주니어</th>
-                        <th><button onClick={(e) => {sessionStorage.clear()}}>clear</button></th>
+                        <th><button onClick={(e) => {sessionStorage.clear()}}>초기화</button></th>
                     </tr>
                     
                 </thead>
