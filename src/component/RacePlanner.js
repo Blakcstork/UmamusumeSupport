@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-import {SmallRaceList, RaceList} from "./RaceList";
+import {SmallRaceList} from "./RaceList";
 
 import styles from "../css/RacePlanner.module.css";
 import dummy from "../tempServer/race.json";
@@ -85,7 +85,7 @@ function RacePlanner({season}){
             <table  className={styles.planTable}>
                 <thead>
                     <tr>
-                        <th>주니어</th>
+                        <th>주니어</th>00
                         <th><button onClick={(e) => {sessionStorage.clear()}}>초기화</button></th>
                     </tr>
                     
