@@ -50,8 +50,8 @@ function RaceContent(){
     }
 
     const onClickSave = (e, params) => {
-        sessionStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
-        console.log(sessionStorage.getItem(`${params.month}${params.day}`))
+        localStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
+        console.log(localStorage.getItem(`${params.month}${params.day}`))
     }
 
     const openPopup = (e) => {
