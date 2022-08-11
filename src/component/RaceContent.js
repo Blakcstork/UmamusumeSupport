@@ -29,6 +29,7 @@ function SaveButton(onClick){
 function RaceContent(){
 
     const [data, setData] = useState("");
+    const [r, setR] = useState(0);
     const [array, setArray] = useState([]);
     const [info, setInfo] = useState([]);
 
@@ -51,6 +52,7 @@ function RaceContent(){
 
     const onClickSave = (e, params) => {
         localStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
+        setR(r + 1)
         console.log(localStorage.getItem(`${params.month}${params.day}`))
     }
 
