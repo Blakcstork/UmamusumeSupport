@@ -49,3 +49,14 @@
     background-color: #ececec;
     border-radius: 10px;
 }
+
+.currentRace {
+    margin-bottom : 20px;
+}
+
+.boldLine {
+    margin-bottom : 20px;
+    margin-top : 10px;
+    border : solid 1px gray;
+
+}

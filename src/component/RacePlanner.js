@@ -27,10 +27,13 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
       if(callback){
         callback();
       }
-      console.log(newArray3)
     }
 
     const newArray3 = dummy.filter((e) => e.month === smonth && e.day.includes(sday));
+    const onClick = (params) => {
+      localStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
+      handleClose();
+    }
 
     return (
       <>
@@ -39,6 +42,7 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+            <div className = {styles.currentRace}>
             <SmallRaceList
                         coverImg={temp.img}
                         name = {temp.name}
@@ -49,6 +53,8 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
                         curve = {temp.curve}
                         fan = {temp.fan}
                   />
+            </div>
+            <div className={styles.boldLine}></div>
           {
             newArray3.map((race) => 
                 <div className={styles.raceList}>
@@ -79,13 +85,6 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
 
 
 
-function PlanButton() {
-  return (
-    <div>
-
-    </div>
-  )
-}
 
 
 
