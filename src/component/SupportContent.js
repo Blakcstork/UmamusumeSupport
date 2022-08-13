@@ -57,6 +57,18 @@ function SupportContent() {
                 <label><input type="radio" name = "rarity" value = "SR"/>SR</label>
                 <label><input type="radio" name = "rarity" value = "R"/>R</label>
             </div>
+            <div>
+                <label><input type="checkbox" name = "rType" value = "도주"/>도주</label>
+                <label><input type="checkbox" name = "rType" value = "선행"/>선행</label>
+                <label><input type="checkbox" name = "rType" value = "선입"/>선입</label>
+                <label><input type="checkbox" name = "rType" value = "추입"/>추입</label>
+            </div>
+            <div>
+                <label><input type="checkbox" name = "dType" value = "단거리"/>단거리</label>
+                <label><input type="checkbox" name = "dType" value = "마일"/>마일</label>
+                <label><input type="checkbox" name = "dType" value = "중거리"/>중거리</label>
+                <label><input type="checkbox" name = "dType" value = "장거리"/>장거리</label>
+            </div>
             <SearchInput setData={setText}/>
             <div className={styles.supportListDiv}>
                     {
