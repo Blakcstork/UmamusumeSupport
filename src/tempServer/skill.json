@@ -104,6 +104,94 @@
         "text" : "코너에 능숙해져 속도가 상승한다.",
         "cost" : 360,
         "img" : ""
+    },
+
+
+    {
+        "name" : "페이스 업",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "레이스 중반에 추월하면 속도가 약간 상승한다",
+        "cost" : 170,
+        "img" : ""
+    },
+    {
+        "name" : "텐션 오르는데!",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "레이스 중반에 추월하면 속도가 상승한다",
+        "cost" : 340,
+        "img" : ""
+    },
+
+
+    {
+        "name" : "꼬리 올리기",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "레이스 중반에 스킬을 많이 발동하면 속도가 약간 상승한다",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "꼬리의 폭포오르기",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "레이스 중반에 추월하면 속도가 상승한다",
+        "cost" : 280,
+        "img" : ""
+    },
+
+
+    {
+        "name" : "수상한 작전",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "레이스 후반에 속도가 다소 상승하지만 많이 지칠 수가 있다",
+        "cost" : 120,
+        "img" : ""
+    },
+    {
+        "name" : "도박사",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "레이스 후반에 속도가 많이 상승하지만 많이 지칠 수가 있다",
+        "cost" : 240,
+        "img" : ""
+    },
+
+
+    {
+        "name" : "뒷심",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "라스트 스퍼트 때 속도가 약간 상승한다",
+        "cost" : 120,
+        "img" : ""
+    },
+    {
+        "name" : "전심전력",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "text" : "라스트 스퍼트 때 속도가 상승한다",
+        "cost" : 240,
+        "img" : ""
     }
 
 ]

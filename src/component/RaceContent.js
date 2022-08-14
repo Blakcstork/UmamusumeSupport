@@ -62,7 +62,7 @@ function RaceContent(){
 
 
     const newArray = dummy.filter((e) => e.name.includes(data));
-    const newArray2 = dummy.filter((e)=> e.type.includes(array[1]) && e.period.includes(array[2]))
+    const newArray2 = dummy.filter((e)=> e.type.includes(array[1]) && e.period.includes(array[2]) && e.grade.includes(array[3]))
 
 
 

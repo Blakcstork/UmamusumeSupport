@@ -9,7 +9,7 @@ import styles from "../css/DetailSearch.module.css"
 
 function DetailSearch({setArray}){
     
-    const [list, setList] = useState(["", "", ""]);
+    const [list, setList] = useState(["", "", "", ""]);
 
     const onChange = (e) => {
         console.log(e);
@@ -27,6 +27,11 @@ function DetailSearch({setArray}){
         else if(e.target.name === "season"){
             const newList = list;
             newList[2] = e.target.value;
+            setList({...newList});            
+        }
+        else if(e.target.name === "grade"){
+            const newList = list;
+            newList[3] = e.target.value;
             setList({...newList});            
         }
 
@@ -65,7 +70,17 @@ function DetailSearch({setArray}){
                             <label><input type = "radio" name = "season" value = "classic" onChange = {onChange}/> 클래식 </label>  
                             <label><input type = "radio" name = "season" value = "senior" onChange = {onChange}/> 시니어 </label>                             
                         </td>
-                    </tr>                    
+                    </tr>
+                    <tr>
+                        <td>등급</td>
+                        <td>
+                            <label><input type = "radio" name = "grade" value = "PreOP" onChange = {onChange}/> Pre-OP </label>
+                            <label><input type = "radio" name = "grade" value = "OP" onChange = {onChange}/> OP </label>  
+                            <label><input type = "radio" name = "grade" value = "G3" onChange = {onChange}/> G3 </label>
+                            <label><input type = "radio" name = "grade" value = "G2" onChange = {onChange}/> G2 </label>  
+                            <label><input type = "radio" name = "grade" value = "G1" onChange = {onChange}/> G1 </label>                              
+                        </td>
+                    </tr>                         
                 </tbody>
             </table>
             <div>
