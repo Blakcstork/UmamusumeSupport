@@ -2001,6 +2001,51 @@
         "fan" : 4100,
         "gate" : 18,
         "img" : ""               
+    },
+    {
+        "name" : "세키야 기념",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1600,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "니이가타",
+        "curve" : "leftO",
+        "require" : 1250,        
+        "fan" : 3900,
+        "gate" : 18,
+        "img" : ""               
+    },
+    {
+        "name" : "엘름 스테이크스",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1700,
+        "type" : "dirt",
+        "grade" : "G3",
+        "place" : "삿포로",
+        "curve" : "right",
+        "require" : 1000,        
+        "fan" : 3600,
+        "gate" : 14,
+        "img" : ""               
+    },
+    {
+        "name" : "레오파드 스테이크스",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "dirt",
+        "grade" : "G3",
+        "place" : "니이가타",
+        "curve" : "leftO",
+        "require" : 1250,        
+        "fan" : 4000,
+        "gate" : 15,
+        "img" : ""               
     }
 
 

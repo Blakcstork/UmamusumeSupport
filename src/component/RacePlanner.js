@@ -30,7 +30,7 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
     }
 
     const newArray3 = dummy.filter((e) => e.month === smonth && e.day.includes(sday));
-    const onClick = (params) => {
+    const onClick = (e, params) => {
       localStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
       handleClose();
     }
@@ -67,6 +67,7 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
                         type = {race.type}
                         curve = {race.curve}
                         fan = {race.fan}
+                        onClick = {(e) => {onClick(e, race)}}
                     />
                 </div>
             )
@@ -92,6 +93,7 @@ function RacePlanner({season}){
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
     const [smonth, setMonth] = useState("");
     const [sday, setDay] = useState("");
+    const [reset, setReset] = useState(0);
     const [selected, setSelected] = useState (null);
 
     const onClick = (e, month, day) => {
@@ -101,6 +103,10 @@ function RacePlanner({season}){
         setSelected(localStorage.getItem(`${month}${day}`))
 
         console.log("onClick activated")
+    }
+
+    const clear = (e) => {
+      localStorage.clear();
     }
 
 
