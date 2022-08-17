@@ -1,5 +1,6 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import DetailSupportInfo from "./DetailSupportInfo.js"
 
 function DetailSupportModal({open, setPopup, message, title, callback, info}) {
     const handleClose = () => {
@@ -16,15 +17,9 @@ function DetailSupportModal({open, setPopup, message, title, callback, info}) {
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {message}
-            <div>
-              
-            </div>
-            <div>
-              
-            </div>
+            <DetailSupportInfo />
             
-            </Modal.Body>
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>
               OK

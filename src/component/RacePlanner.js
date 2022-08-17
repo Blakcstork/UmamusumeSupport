@@ -105,12 +105,9 @@ function RacePlanner({season}){
         console.log("onClick activated")
     }
 
-    const clear = (e) => {
-      localStorage.clear();
-    }
-
 
     const isSelected = (e) =>{
+      console.log("isSelected call")
       return (localStorage.getItem(e) === null)
     }
 
@@ -123,7 +120,7 @@ function RacePlanner({season}){
                 <thead>
                     <tr>
                         <th>주니어</th>
-                        <th><button onClick={(e) => {localStorage.clear()}}>초기화</button></th>
+                        <th><button onClick={(e) => {localStorage.clear(); setReset(reset+1);}}>초기화</button></th>
 
                     </tr>
                     
