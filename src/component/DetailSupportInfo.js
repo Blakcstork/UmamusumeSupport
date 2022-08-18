@@ -9,26 +9,42 @@ import supportDummy from "../tempServer/support.json"
 
 function SkillAccordion(supportName){
 
-    const thisSupport = supportDummy.filter((e) => e.name === supportName);
 
 
     return (
         <Accordion defaultActiveKey="0" alwaysOpen>
             
           <Accordion.Item eventKey="0">
-            <Accordion.Header>Skill Name Here</Accordion.Header>
+            <Accordion.Header>OwnSkill Here</Accordion.Header>
             <Accordion.Body>
               Skill Detail Here
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
-            <Accordion.Header>Skill Name 2 Here</Accordion.Header>
+            <Accordion.Header>EventSkill Here</Accordion.Header>
             <Accordion.Body>
               Skill Detail 2 Here
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
       );  
+}
+
+function EventAccordion(supportName){
+
+
+
+  return (
+      <Accordion defaultActiveKey="0" alwaysOpen>
+          
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Event Here</Accordion.Header>
+          <Accordion.Body>
+            Skill Detail Here
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
+    );  
 }
 
 
