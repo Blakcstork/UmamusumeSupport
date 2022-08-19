@@ -11,18 +11,21 @@
     border-radius : 12px;
 }
 
-.detailSupportImg{
 
+.detailSupportImg{
+    width : 49%;
+    height : 40%;
 }
 
 .detailSupportFunc{
-
+    width : 49%;
+    height : 40%;
 }
 
 .detailSupportSkill{
-
+    width : 100%;
 }
 
 .detailSupportEvent{
-    
+    width : 100%;   
 }

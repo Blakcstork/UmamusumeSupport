@@ -192,6 +192,279 @@
         "text" : "라스트 스퍼트 때 속도가 상승한다",
         "cost" : 240,
         "img" : ""
+    },
+
+
+
+    {
+        "name" : "리커멘드",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "trackType" : "dirt",
+        "text" :  "레이스 중반에 경합하면 속도가 상승한다 <더트>",
+        "cost" : 180,
+        "img" : ""
+    },
+    {
+        "name" : "차트 급상승!",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "all",
+        "trackType" : "dirt",
+        "text" : "레이스 중반에 경합하면 속도가 상승한다 <더트>",
+        "cost" : 360,
+        "img" : ""
+    },
+
+
+
+
+
+
+
+    {
+        "name" : "오기",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "추월이 약간 성공하기 쉬워진다 <마일>",
+        "cost" : 120,
+        "img" : ""
+    },
+    {
+        "name" : "여장부 기질",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "추월이 성공하기 쉬워진다 <마일>",
+        "cost" : 240,
+        "img" : ""
+    },
+
+    {
+        "name" : "단거리 직선",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "단거리",
+        "text" : "직선에서 속도가 약간 상승한다 <단거리>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "마일 직선",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "직선에서 속도가 약간 상승한다 <마일>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "중거리 직선",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "중거리",
+        "text" : "직선에서 속도가 약간 상승한다 <중거리>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "광망일섬",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "중거리",
+        "text" : "직선에서 속도가 상승한다 <중거리>",
+        "cost" : 360,
+        "img" : ""
+    },
+    {
+        "name" : "장거리 직선",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "장거리",
+        "text" : "직선에서 속도가 약간 상승한다 <장거리>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "열풍일섬",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "장거리",
+        "text" : "직선에서 속도가 상승한다 <장거리>",
+        "cost" : 360,
+        "img" : ""
+    },
+
+
+    
+    {
+        "name" : "단거리 코너",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "단거리",
+        "text" : "코너에서 속도가 약간 상승한다 <단거리>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "마일 코너",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "코너에서 속도가 약간 상승한다 <마일>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "중거리 코너",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "중거리",
+        "text" : "코너에서 속도가 약간 상승한다 <중거리>",
+        "cost" : 100,
+        "img" : ""
+    },
+    {
+        "name" : "광망원인",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "중거리",
+        "text" : "코너에서 속도가 상승한다 <중거리>",
+        "cost" : 360,
+        "img" : ""
+    },
+    {
+        "name" : "장거리 코너",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "장거리",
+        "text" : "코너에서 속도가 약간 상승한다 <장거리>",
+        "cost" : 100,
+        "img" : ""
+    },
+
+    {
+        "name" : "큰 리드",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "단거리",
+        "text" : "레이스 중반에 크게 거리를 벌린 선두라면 약간 리드를 유지하기 쉬워진다 <단거리>",
+        "cost" : 170,
+        "img" : ""
+    },
+    {
+        "name" : "압도적 리드",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "단거리",
+        "text" : "레이스 중반에 크게 거리를 벌린 선두라면 리드를 유지하기 쉬워진다 <단거리>",
+        "cost" : 340,
+        "img" : ""
+    },
+
+    {
+        "name" : "경쾌한 발걸음",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "단거리",
+        "text" : "레이스 종반이 다가왔을 때 전방에 있으면 속도가 약간 상승한다 <단거리>",
+        "cost" : 160,
+        "img" : ""
+    },
+    {
+        "name" : "의기충천",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "단거리",
+        "text" : "레이스 종반이 다가왔을 때 전방에 있으면 속도가 상승한다 <단거리>",
+        "cost" : 320,
+        "img" : ""
+    },
+
+    {
+        "name" : "적극책",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "레이스 초반에 전방에 있으면 약간 거리를 벌리기 쉬워진다 <마일>",
+        "cost" : 160,
+        "img" : ""
+    },
+    {
+        "name" : "마일의 지배자",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "레이스 초반에 전방에 있으면 약간 거리를 벌리기 쉬워진다 <마일>",
+        "cost" : 320,
+        "img" : ""
+    },
+
+
+    {
+        "name" : "기어 시프트",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "레이스 중반에 전방에 있으면 약간 추월하기 쉬워진다 <마일>",
+        "cost" : 160,
+        "img" : ""
+    },
+    {
+        "name" : "기어 체인지",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "마일",
+        "text" : "레이스 중반에 전방에 있으면 추월하기 쉬워진다 <마일>",
+        "cost" : 320,
+        "img" : ""
+    },
+
+
+    {
+        "name" : "기백을 넣고서",
+        "rarity" : "normal",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "중거리",
+        "text" : "레이스 중반에 전방에 있으면 뒤쪽 우마무스메들의 속도를 정말 약간 낮추고 자신의 속도를 약간 올린다 <중거리>",
+        "cost" : 160,
+        "img" : ""
+    },
+    {
+        "name" : "거친 선풍",
+        "rarity" : "rare",
+        "type" : "speed",
+        "runType" : "all",
+        "distanceType" : "중거리",
+        "text" : "레이스 중반에 전방에 있으면 뒤쪽 우마무스메들의 속도를 약간 낮추고 자신의 속도를 약간 올린다 <중거리>",
+        "cost" : 320,
+        "img" : ""
     }
 
 ]

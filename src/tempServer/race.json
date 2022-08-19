@@ -2046,6 +2046,197 @@
         "fan" : 4000,
         "gate" : 15,
         "img" : ""               
+    },
+    {
+        "name" : "삿포로 닛케이 오픈",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 2600,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "삿포로",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2600,
+        "gate" : 14,
+        "img" : ""               
+    },
+    {
+        "name" : "UHB상",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "삿포로",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2300,
+        "gate" : 16,
+        "img" : ""               
+    },
+    {
+        "name" : "아소 스테이크스",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1700,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "코쿠라",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 16,
+        "img" : ""               
+    },
+    {
+        "name" : "간에츠 스테이크스",
+        "month" : 8,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "니이가타",
+        "curve" : "leftO",
+        "require" : 350,        
+        "fan" : 2400,
+        "gate" : 18,
+        "img" : ""               
+    }
+
+
+
+    ,
+    {
+        "name" : "삿포로 기념",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 2000,
+        "type" : "grass",
+        "grade" : "G2",
+        "place" : "삿포로",
+        "curve" : "right",
+        "require" : 2000,        
+        "fan" : 7000,
+        "gate" : 16,
+        "img" : ""               
+    },
+    {
+        "name" : "키타큐슈 기념",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "코쿠라",
+        "curve" : "right",
+        "require" : 1250,        
+        "fan" : 3900,
+        "gate" : 18,
+        "img" : ""               
+    },
+    {
+        "name" : "킨렌드컵",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "G3",
+        "place" : "삿포로",
+        "curve" : "right",
+        "require" : 1500,        
+        "fan" : 4100,
+        "gate" : 16,
+        "img" : ""               
+    },
+    {
+        "name" : "NST상",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "니이가타",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 15,
+        "img" : ""               
+    },
+    {
+        "name" : "BSN상",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "dirt",
+        "grade" : "OP",
+        "place" : "니이가타",
+        "curve" : "left",
+        "require" : 350,        
+        "fan" : 2300,
+        "gate" : 15,
+        "img" : ""               
+    },
+    {
+        "name" : "코쿠라 닛케이 오픈",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1800,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "코쿠라",
+        "curve" : "right",
+        "require" : 350,        
+        "fan" : 2400,
+        "gate" : 16,
+        "img" : ""               
+    },
+    {
+        "name" : "따오기 스테이크스",
+        "month" : 8,
+        "day" : "후",
+        "period" : "classic",
+        "distance" : 1400,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "니이가타",
+        "curve" : "leftI",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 18,
+        "img" : ""               
+    }
+    
+    
+    
+    
+    
+    
+    ,
+    {
+        "name" : "센토 스테이크스",
+        "month" : 9,
+        "day" : "전",
+        "period" : "classic",
+        "distance" : 1200,
+        "type" : "grass",
+        "grade" : "OP",
+        "place" : "니이가타",
+        "curve" : "leftI",
+        "require" : 350,        
+        "fan" : 2200,
+        "gate" : 18,
+        "img" : ""               
     }
 
 

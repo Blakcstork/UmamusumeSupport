@@ -1,5 +1,6 @@
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+
 import DetailSupportInfo from "./DetailSupportInfo.js"
 
 function DetailSupportModal({open, setPopup, message, title, callback, info}) {
@@ -17,7 +18,7 @@ function DetailSupportModal({open, setPopup, message, title, callback, info}) {
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <DetailSupportInfo />
+            <DetailSupportInfo info = {info} />
             
           </Modal.Body>
           <Modal.Footer>

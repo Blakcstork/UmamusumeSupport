@@ -1,15 +1,18 @@
+import {useEffect} from "react"
+
 import Accordion from "react-bootstrap/Accordion"
 
 import styles from "../css/DetailSupportInfo.module.css"
 
 import skillDummy from "../tempServer/skill.json"
-import supportDummy from "../tempServer/support.json"
 
 
 
-function SkillAccordion(supportName){
+
+function SkillAccordion({oSkills, eSkills}){
 
 
+    
 
     return (
         <Accordion defaultActiveKey="0" alwaysOpen>
@@ -17,7 +20,12 @@ function SkillAccordion(supportName){
           <Accordion.Item eventKey="0">
             <Accordion.Header>OwnSkill Here</Accordion.Header>
             <Accordion.Body>
-              Skill Detail Here
+              {oSkills.map((skill) => 
+                <div>
+                  {skill}
+                </div>
+              
+              )}
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -30,9 +38,9 @@ function SkillAccordion(supportName){
       );  
 }
 
-function EventAccordion(supportName){
+function EventAccordion({supportName}){
 
-
+  
 
   return (
       <Accordion defaultActiveKey="0" alwaysOpen>
@@ -40,7 +48,7 @@ function EventAccordion(supportName){
         <Accordion.Item eventKey="0">
           <Accordion.Header>Event Here</Accordion.Header>
           <Accordion.Body>
-            Skill Detail Here
+            EventList Here
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
@@ -48,21 +56,41 @@ function EventAccordion(supportName){
 }
 
 
-function DetailSupportInfo({}){
+function DetailSupportInfo({info}){
+
+    let nickname, name, img = "";
+    let oSkills, eSkills = [];
+    let events = [];
+
+    try{
+      nickname = info.nickname;
+      name = info.name;
+      img = info.img;
+      oSkills = info.ownSkill;
+      eSkills = info.eventSkill;
+    }
+    catch(err){
+      oSkills = [];
+      console.log("nothing");
+    }
+
+
+    useEffect(() => console.log(info),[]);
+
     return(
         
         <div className={styles.detailSupportInfo}>
             <div className = {styles.detailSupportImg}>
-                Support Image
+              {`${nickname}, ${name}`}
             </div>
             <div className = {styles.detailSupportFunc}>
                 allFunctions
             </div>
             <div className = {styles.detailSupportSkill}>
-                <SkillAccordion />
+                <SkillAccordion oSkills={oSkills}/>
             </div>
             <div className = {styles.detailSupportEvent}>
-                Events
+                <EventAccordion />
             </div>
         </div>
     )

@@ -36,14 +36,14 @@ function SupportContent() {
     }
 
     const onClickList = (e, support) => {
-        setPopup({open: true, title : `${support.name}, ${support.nickname}`, message : "Hello!"})
+        setPopup({open: true, title : `${support.name}, ${support.nickname}`, message : "Hello!", info : support})
     }
 
 
     return(
         <div className={styles.contents}>
             <p>도-모. 서포트 내용입니다.</p>
-            <DetailSupportModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback}/>
+            <DetailSupportModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {popup.info}/>
             <div>
                 <img src = "/images/types/i_type1.png" alt = "speed" className={style} onClick= {onClick}/>
                 <img src = "/images/types/i_type2.png" alt = "stamina" className={style} onClick= {onClick}/>
