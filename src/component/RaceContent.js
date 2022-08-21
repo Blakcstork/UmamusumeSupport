@@ -30,7 +30,7 @@ function RaceContent(){
 
     const [data, setData] = useState("");
     const [r, setR] = useState(0);
-    const [array, setArray] = useState([]);
+    const [array, setArray] = useState(["", "", "", ""]);
     const [info, setInfo] = useState([]);
 
     const [detailOpen, setDetailOpen] = useState(false);
@@ -62,7 +62,7 @@ function RaceContent(){
 
 
     const newArray = dummy.filter((e) => e.name.includes(data));
-    const newArray2 = dummy.filter((e)=> e.type.includes(array[1]) && e.period.includes(array[2]) && e.grade.includes(array[3]))
+    const newArray2 = dummy.filter((e)=> e.name.includes(data) && (e.type.includes(array[1]) && e.period.includes(array[2]) && e.grade.includes(array[3])))
 
 
 
@@ -78,38 +78,18 @@ function RaceContent(){
             <RacePlanner />
             <DetailRaceModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
-            { detailOpen ? null : <SearchInput setData = {setData}/>}
+            <SearchInput setData = {setData}/>
             </div>
             <button onClick={() => {toggleDetail()}}>상세 검색</button>
 
-            { detailOpen ? <DetailSearch setArray = {setArray}/> : null}
+            <DetailSearch setArray = {setArray}/>
 
             <div>
             <button onClick = {() => {console.log(newArray2, array)}}>click!</button>
             <ul>
                 {
-                    detailOpen ? 
-                    
                     newArray2.map((race) =>
                         <li>
-                            <RaceList
-                            coverImg={race.img}
-                            name = {race.name}
-                            grade = {race.grade}
-                            distance = {race.distance}
-                            require = {race.require}
-                            type = {race.type}
-                            curve = {race.curve}
-                            fan = {race.fan}
-                            onClick={(e) => {onClick(e, race)}}
-                            />
-                        </li> 
-                    )
-
-                    :
-
-                    newArray.map((race) =>
-                        <li className={styles.contentList}>
                             <RaceList
                             coverImg={race.img}
                             name = {race.name}
@@ -124,7 +104,6 @@ function RaceContent(){
                             <button onClick = {(e) => {onClickSave(e,race)}}> + </button>
                         </li> 
                     )
-
 
                 }
             </ul>
