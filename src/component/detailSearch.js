@@ -17,6 +17,7 @@ function DetailSearch({setArray}){
           const newList = list;
           newList[0] = e.target.value;
           setList({...newList}); //... 붙이면 해제했다가 다시 붙이는 것
+          console.log(newList);
 
         }
         else if(e.target.name === "ground") {
@@ -50,10 +51,10 @@ function DetailSearch({setArray}){
                     <tr>
                         <td>거리</td>
                         <td>
-                            <label><input type = "radio" name = "distance" value = "short" onChange={onChange}/> 단거리 </label>
-                            <label><input type = "radio" name = "distance" value = "mile" onChange={onChange}/> 마일 </label>
-                            <label><input type = "radio" name = "distance" value = "middle" onChange={onChange}/> 중거리 </label>
-                            <label><input type = "radio" name = "distance" value = "long" onChange={onChange}/> 장거리 </label>                            
+                            <label><input type = "radio" name = "distance" value = "단거리" onChange={onChange}/> 단거리 </label>
+                            <label><input type = "radio" name = "distance" value = "마일" onChange={onChange}/> 마일 </label>
+                            <label><input type = "radio" name = "distance" value = "중거리" onChange={onChange}/> 중거리 </label>
+                            <label><input type = "radio" name = "distance" value = "장거리" onChange={onChange}/> 장거리 </label>                            
                         </td>
                     </tr>
                     <tr>

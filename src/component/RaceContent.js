@@ -13,12 +13,14 @@ import dummy from "../tempServer/race.json"
 
 
 
-function SaveButton(onClick){
+function DistanceTranslate(distance){
 
-    const [isClicked, setIsClicked] = useState(false);
-
-
-
+    return(
+    distance >= 1200 && distance < 1600 ?  "단거리" : 
+    distance >= 1600 && distance < 1801 ?  "마일" :
+    distance >= 1801 && distance < 2401 ?  "중거리" :
+    distance >= 2401 ? "장거리" : "error"
+    )
 }
 
 
@@ -36,6 +38,7 @@ function RaceContent(){
     const [detailOpen, setDetailOpen] = useState(false);
 
     const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
+    const[planner, setPlanner] = useState("junior");
 
 
     const toggleDetail = () => {
@@ -60,9 +63,7 @@ function RaceContent(){
         setPopup({open: true, title: "Hello", message : "Hello Sucker" })
     }
 
-
-    const newArray = dummy.filter((e) => e.name.includes(data));
-    const newArray2 = dummy.filter((e)=> e.name.includes(data) && (e.type.includes(array[1]) && e.period.includes(array[2]) && e.grade.includes(array[3])))
+    const newArray2 = dummy.filter((e)=> e.name.includes(data) && (DistanceTranslate(e.distance).includes(array[0]) && e.type.includes(array[1]) && e.period.includes(array[2]) && e.grade.includes(array[3])))
 
 
 
