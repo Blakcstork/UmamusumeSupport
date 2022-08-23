@@ -1,6 +1,6 @@
 import {useState} from "react"
-import SearchInput from "./searchInput.js";
-import DetailSearch from "./detailSearch.js";
+import SearchInput from "./SearchInput.js";
+import {DetailSearchRace} from "./DetailSearch.js";
 import {GradeButton} from "./GradeButton.js";
 import DetailRaceModal from "./DetailRaceModal.js";
 import RacePlanner from "./RacePlanner.js";
@@ -83,7 +83,7 @@ function RaceContent(){
             </div>
             <button onClick={() => {toggleDetail()}}>상세 검색</button>
 
-            <DetailSearch setArray = {setArray}/>
+            <DetailSearchRace setArray = {setArray}/>
 
             <div>
             <button onClick = {() => {console.log(newArray2, array)}}>click!</button>
