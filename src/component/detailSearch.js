@@ -277,15 +277,6 @@ function DetailSearchUma({setArray}){
             <table className={styles.searchTable}>
                 <tbody>
                     <tr>
-                        <td>거리</td>
-                        <td>
-                            <label><input type = "radio" name = "distance" value = "단거리" onChange={onChange}/> 단거리 </label>
-                            <label><input type = "radio" name = "distance" value = "마일" onChange={onChange}/> 마일 </label>
-                            <label><input type = "radio" name = "distance" value = "중거리" onChange={onChange}/> 중거리 </label>
-                            <label><input type = "radio" name = "distance" value = "장거리" onChange={onChange}/> 장거리 </label>                            
-                        </td>
-                    </tr>
-                    <tr>
                         <td>타입</td>
                         <td>
                             <label><input type = "radio" name = "ground" value = "grass" onChange = {onChange}/> 잔디 </label>
@@ -295,19 +286,19 @@ function DetailSearchUma({setArray}){
                     <tr>
                         <td>시즌</td>
                         <td>
-                            <label><input type = "radio" name = "season" value = "junior" onChange = {onChange}/> 주니어 </label>
-                            <label><input type = "radio" name = "season" value = "classic" onChange = {onChange}/> 클래식 </label>  
-                            <label><input type = "radio" name = "season" value = "senior" onChange = {onChange}/> 시니어 </label>                             
+                            <label><input type = "radio" name = "dType" value = "단거리" onChange = {onChange}/> 단거리 </label>
+                            <label><input type = "radio" name = "dType" value = "마일" onChange = {onChange}/> 마일 </label>  
+                            <label><input type = "radio" name = "dType" value = "중거리" onChange = {onChange}/> 중거리 </label>
+                            <label><input type = "radio" name = "dType" value = "장거리" onChange = {onChange}/> 장거리 </label>                             
                         </td>
                     </tr>
                     <tr>
                         <td>등급</td>
                         <td>
-                            <label><input type = "radio" name = "grade" value = "PreOP" onChange = {onChange}/> Pre-OP </label>
-                            <label><input type = "radio" name = "grade" value = "OP" onChange = {onChange}/> OP </label>  
-                            <label><input type = "radio" name = "grade" value = "G3" onChange = {onChange}/> G3 </label>
-                            <label><input type = "radio" name = "grade" value = "G2" onChange = {onChange}/> G2 </label>  
-                            <label><input type = "radio" name = "grade" value = "G1" onChange = {onChange}/> G1 </label>                              
+                            <label><input type = "radio" name = "rType" value = "도주" onChange = {onChange}/> 도주 </label>
+                            <label><input type = "radio" name = "rType" value = "선행" onChange = {onChange}/> 선행 </label>  
+                            <label><input type = "radio" name = "rType" value = "선입" onChange = {onChange}/> 선입 </label>
+                            <label><input type = "radio" name = "rType" value = "추입" onChange = {onChange}/> 추입 </label>                               
                         </td>
                     </tr>                         
                 </tbody>
