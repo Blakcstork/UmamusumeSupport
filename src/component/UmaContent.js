@@ -23,7 +23,7 @@ function UmaContent() {
 
     return(
         <div className={styles.contents}>
-            <p>도-모. 서포트 내용입니다.</p>
+            <p>도-모. 캐릭터 내용입니다.</p>
             <DetailSearchUma setArray = {setArray}/>
             <SearchInput setData={setData}/>
         </div>

@@ -23,25 +23,11 @@ function SupportList({name, nickname, type, rarity, distanceType, runType, img})
 function SupportContent() {
 
     const [data, setData] = useState("");
-    const [style, setStyle] = useState(`${styles.typeButton}`);
     const [array, setArray] = useState(["", "", "", ""])
-    const [isClicked, setIsClicked] = useState(false);
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
-
-
-    const isD = (e) => {
-
-    }
 
     const newArray2 = supportDummy.filter((d) => d.name.includes(data) && (d.type.includes(array[0]) && d.rarity === (array[1])))
 
-
-
-    const onClick = (e) =>{
-        console.log(e);
-        isClicked ? setStyle(`${styles.typeButton}`) : setStyle(`${styles.typeButton} ${styles.clicked}`)
-        setIsClicked(!isClicked);
-    }
 
     const onClickList = (e, support) => {
         setPopup({open: true, title : `${support.name}, ${support.nickname}`, message : "Hello!", info : support})

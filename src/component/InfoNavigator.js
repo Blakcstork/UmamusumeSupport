@@ -11,7 +11,7 @@ function InfoNavigator(){
                 <button className={styles.navButton}> 육성 팁 </button>
                 <Link to = {`/`}> <button className={styles.navButton}>레이스 정보 </button> </Link>
                 <Link to = {`/support`}><button className={styles.navButton}>서포트카드 DB</button> </Link>
-                <button className={styles.navButton}> 우마무스메 DB </button>
+                <Link to = {`/uma`}><button className={styles.navButton}> 우마무스메 DB </button> </Link>
             </div>
         </div>
     )
