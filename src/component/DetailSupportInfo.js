@@ -31,7 +31,12 @@ function SkillAccordion({oSkills, eSkills}){
           <Accordion.Item eventKey="1">
             <Accordion.Header>EventSkill Here</Accordion.Header>
             <Accordion.Body>
-              Skill Detail 2 Here
+            {eSkills.map((skill) => 
+                <div>
+                  {skill}
+                </div>
+              
+              )}
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

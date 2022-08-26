@@ -34,18 +34,11 @@ function RaceContent(){
     const [r, setR] = useState(0);
     const [array, setArray] = useState(["", "", "", ""]);
     const [info, setInfo] = useState([]);
-
-    const [detailOpen, setDetailOpen] = useState(false);
-
     const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
     const[planner, setPlanner] = useState("junior");
 
 
-    const toggleDetail = () => {
-        setDetailOpen(!detailOpen);
-        console.log(detailOpen);
-    }
-    
+
 
 
     const onClick = (e, params) => {
@@ -81,12 +74,10 @@ function RaceContent(){
             <div>
             <SearchInput setData = {setData}/>
             </div>
-            <button onClick={() => {toggleDetail()}}>상세 검색</button>
 
             <DetailSearchRace setArray = {setArray}/>
 
             <div>
-            <button onClick = {() => {console.log(newArray2, array)}}>click!</button>
             <ul>
                 {
                     newArray2.map((race) =>
