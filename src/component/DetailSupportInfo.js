@@ -80,8 +80,6 @@ function DetailSupportInfo({info}){
     }
 
 
-    useEffect(() => console.log(info),[]);
-
     return(
         
         <div className={styles.detailSupportInfo}>
