@@ -15,7 +15,7 @@ import styles from "../css/UmaContent.module.css"
 function UmaContent() {
 
     const [data, setData] = useState("");
-    const [array, setArray] = useState(["", "", "", ""])
+    const [array, setArray] = useState([[], [], [], []])
 
 
 

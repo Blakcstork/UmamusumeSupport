@@ -23,10 +23,10 @@ function SupportList({name, nickname, type, rarity, distanceType, runType, img})
 function SupportContent() {
 
     const [data, setData] = useState("");
-    const [array, setArray] = useState(["", "", "", ""])
+    const [array, setArray] = useState([[], [], [], []])
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
 
-    const newArray2 = supportDummy.filter((d) => d.name.includes(data) && (d.type.includes(array[0]) && d.rarity === (array[1])))
+    const newArray2 = supportDummy.filter((d) => d.name.includes(data) && (array[0].includes) && d.rarity === (array[1]))
 
 
     const onClickList = (e, support) => {

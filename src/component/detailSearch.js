@@ -45,9 +45,7 @@ function DetailSearchRace({setArray}){
 
     }
 
-    const onClick = (e) =>{
-        e.target.checked = !(e.target.checked)
-    }
+
 
 
 
@@ -59,10 +57,10 @@ function DetailSearchRace({setArray}){
                     <tr>
                         <td>거리</td>
                         <td>
-                            <label><input type = "radio" name = "distance" value = "단거리" onChange={onChange} onClick = {onClick}/> 단거리 </label>
-                            <label><input type = "radio" name = "distance" value = "마일" onChange={onChange} onClick = {onClick}/> 마일 </label>
-                            <label><input type = "radio" name = "distance" value = "중거리" onChange={onChange} onClick = {onClick}/> 중거리 </label>
-                            <label><input type = "radio" name = "distance" value = "장거리" onChange={onChange} onClick = {onClick}/> 장거리 </label>                            
+                            <label><input type = "radio" name = "distance" value = "단거리" onChange={onChange} /> 단거리 </label>
+                            <label><input type = "radio" name = "distance" value = "마일" onChange={onChange} /> 마일 </label>
+                            <label><input type = "radio" name = "distance" value = "중거리" onChange={onChange} /> 중거리 </label>
+                            <label><input type = "radio" name = "distance" value = "장거리" onChange={onChange} /> 장거리 </label>                            
                         </td>
                     </tr>
                     <tr>
@@ -120,7 +118,7 @@ function DetailSearchSupport({setArray}){
 
     const rarityKind = ["SSR", "SR", "R"];
 
-    const [list, setList] = useState(["", "", "", ""]);
+    const [list, setList] = useState([[], [], [], []]);
 
     const onClick = (e) => {
         console.log(e);
@@ -130,26 +128,80 @@ function DetailSearchSupport({setArray}){
         console.log(e);
         if(e.target.name === "type") {
           const newList = list;
-          newList[0] = e.target.value;
-          setList({...newList}); //... 붙이면 해제했다가 다시 붙이는 것
-          console.log(newList);
+
+          if(e.target.checked){
+            newList[0].push(e.target.value);
+            setList({...newList}); //... 붙이면 해제했다가 다시 붙이는 것
+            console.log(newList);
+          }
+          else{
+            for (let i = 0 ; i < newList[0].length; i++){
+                if(newList[0][i] === e.target.value){
+                    newList[0].splice(i,1);
+                    i--;
+                }
+            }
+            setList({...newList}); //... 붙이면 해제했다가 다시 붙이는 것
+            console.log(newList);
+          }
 
         }
         else if(e.target.name === "rarity") {
             const newList = list;
-            newList[1] = e.target.value;
-            setList({...newList});
-            console.log(newList);
+
+            if(e.target.checked){
+              newList[1].push(e.target.value);
+              setList({...newList});
+              console.log(newList);
+            }
+            else{
+              for (let i = 0 ; i < newList[1].length; i++){
+                  if(newList[1][i] === e.target.value){
+                      newList[1].splice(i,1);
+                      i--;
+                  }
+              }
+              setList({...newList});
+              console.log(newList);
+            }
         }
         else if(e.target.name === "rType"){
             const newList = list;
-            newList[2] = e.target.value;
-            setList({...newList});            
+
+            if(e.target.checked){
+              newList[2].push(e.target.value);
+              setList({...newList}); 
+              console.log(newList);
+            }
+            else{
+              for (let i = 0 ; i < newList[2].length; i++){
+                  if(newList[2][i] === e.target.value){
+                      newList[2].splice(i,1);
+                      i--;
+                  }
+              }
+              setList({...newList}); 
+              console.log(newList);
+            }          
         }
         else if(e.target.name === "dType"){
             const newList = list;
-            newList[3] = e.target.value;
-            setList({...newList});            
+
+            if(e.target.checked){
+              newList[3].push(e.target.value);
+              setList({...newList}); 
+              console.log(newList);
+            }
+            else{
+              for (let i = 0 ; i < newList[3].length; i++){
+                  if(newList[3][i] === e.target.value){
+                      newList[3].splice(i,1);
+                      i--;
+                  }
+              }
+              setList({...newList});
+              console.log(newList);
+            }       
         }
 
         setArray(list);
@@ -170,7 +222,7 @@ function DetailSearchSupport({setArray}){
                             {typeKind.map(kind => (
                                     <label>
                                         <input
-                                            type = "radio"
+                                            type = "checkbox"
                                             name = "type"
                                             className = {styles.input_hidden}
                                             value = {kind.name}
@@ -189,7 +241,7 @@ function DetailSearchSupport({setArray}){
                             {rarityKind.map(kind => (
                                 <label>
                                     <input
-                                        type = "radio"
+                                        type = "checkbox"
                                         name = "rarity"
                                         className = {styles.input_hidden}
                                         value = {kind}
@@ -205,19 +257,19 @@ function DetailSearchSupport({setArray}){
                     <tr>
                         <td>각질</td>
                         <td>
-                            <label><input type="radio" name = "rType" value = "도주"/>도주</label>
-                            <label><input type="radio" name = "rType" value = "선행"/>선행</label>
-                            <label><input type="radio" name = "rType" value = "선입"/>선입</label>
-                            <label><input type="radio" name = "rType" value = "추입"/>추입</label>                            
+                            <label><input type="checkbox" name = "rType" value = "도주" onChange = {onChange}/>도주</label>
+                            <label><input type="checkbox" name = "rType" value = "선행" onChange = {onChange}/>선행</label>
+                            <label><input type="checkbox" name = "rType" value = "선입" onChange = {onChange}/>선입</label>
+                            <label><input type="checkbox" name = "rType" value = "추입" onChange = {onChange}/>추입</label>                            
                         </td>
                     </tr>
                     <tr>
                         <td>경기장 각질</td>
                         <td>
-                            <label><input type="radio" name = "dType" value = "단거리"/>단거리</label>
-                            <label><input type="radio" name = "dType" value = "마일"/>마일</label>
-                            <label><input type="radio" name = "dType" value = "중거리"/>중거리</label>
-                            <label><input type="radio" name = "dType" value = "장거리"/>장거리</label>                           
+                            <label><input type="checkbox" name = "dType" value = "단거리" onChange = {onChange}/>단거리</label>
+                            <label><input type="checkbox" name = "dType" value = "마일" onChange = {onChange}/>마일</label>
+                            <label><input type="checkbox" name = "dType" value = "중거리" onChange = {onChange}/>중거리</label>
+                            <label><input type="checkbox" name = "dType" value = "장거리" onChange = {onChange}/>장거리</label>                           
                         </td>
                     </tr>                         
                 </tbody>
