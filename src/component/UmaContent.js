@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchInput from "./SearchInput.js";
 import { DetailSearchUma } from "./DetailSearch.js";
+import DetailUmaModal from "./DetailUmaModal.js"
 
 import umaDummy from "../tempServer/uma.json"
 

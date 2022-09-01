@@ -13,6 +13,13 @@ function DetailUmaInfo({nickname, name, rarity, img, trackType, distanceType, ru
             <div>
                 <div>
                     <table>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <table>
                         <thead>
                         </thead>
                         <tbody>
