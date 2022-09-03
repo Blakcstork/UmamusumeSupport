@@ -1,9 +1,7 @@
 import {useEffect} from "react"
-
 import Accordion from "react-bootstrap/Accordion"
 
 import styles from "../css/DetailSupportInfo.module.css"
-
 import skillDummy from "../tempServer/skill.json"
 
 
