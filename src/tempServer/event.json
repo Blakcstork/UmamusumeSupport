@@ -1,0 +1,23 @@
+[
+    {
+        "eventName" : "",
+        "eventType" : "캐릭터",
+        "from" : "",
+        "choose" : [],
+        "result" : []
+    },
+    {
+        "eventName" : "",
+        "eventType" : "서포트",
+        "from" : "",
+        "choose" : [],
+        "result" : []
+    },
+    {
+        "eventName" : "",
+        "eventType" : "공용",
+        "from" : "",
+        "choose" : [],
+        "result" : []
+    }
+]
