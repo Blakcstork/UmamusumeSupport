@@ -1,14 +1,5 @@
 [
     {
-        "eventName" : "",
-        "eventType" : "캐릭터",
-        "from" : "",
-        "choose" : [],
-        "result" : []
-    },
-
-
-    {
         "eventName" : "아아, 우정",
         "eventType" : "서포트",
         "from" : "다가오는 열기에 떠밀려",
