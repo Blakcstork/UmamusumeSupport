@@ -18,6 +18,8 @@ function UmaContent() {
     const [data, setData] = useState("");
     const [array, setArray] = useState([[], [], [], []])
 
+    const newArray = umaDummy;
+
 
 
 
@@ -27,6 +29,14 @@ function UmaContent() {
             <p>도-모. 캐릭터 내용입니다.</p>
             <DetailSearchUma setArray = {setArray}/>
             <SearchInput setData={setData}/>
+            <div>
+                {
+                    newArray.map((e) => (
+                        <div>{e.name}</div>
+                    ))
+                }
+
+            </div>
         </div>
     )
 }

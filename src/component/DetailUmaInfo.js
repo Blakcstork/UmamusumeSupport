@@ -44,7 +44,7 @@ function DetailUmaInfo({nickname, name, rarity, img, trackType, distanceType, ru
                     {goal.map((g) => 
                     (    <li>
                             {g.name}
-                        </li>)
+                        </li>) 
                     )}
                     </ul>
 
