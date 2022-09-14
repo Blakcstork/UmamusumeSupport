@@ -50,19 +50,6 @@ function DetailUmaInfo({nickname, name, rarity, img, trackType, distanceType, ru
 
                 </Accordion.Body>
           </Accordion.Item>
-          <Accordion.Item eventKey="1">
-            <Accordion.Header>GOAL Here</Accordion.Header>
-                <Accordion.Body>
-                    <ul>
-                    {goal.map((g) => 
-                    (    <li>
-                            {g.name}
-                        </li>)
-                    )}
-                    </ul>
-
-                </Accordion.Body>
-          </Accordion.Item>
             </div>
         </div>
     )
