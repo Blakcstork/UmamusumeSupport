@@ -2,6 +2,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 import DetailUmatInfo from "./DetailUmaInfo.js"
+import DetailUmaInfo from './DetailUmaInfo.js';
 
 function DetailSupportModal({open, setPopup, message, title, callback, info}) {
     const handleClose = () => {
@@ -18,7 +19,7 @@ function DetailSupportModal({open, setPopup, message, title, callback, info}) {
             <Modal.Title>{title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            
+            <DetailUmaInfo />
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" onClick={handleClose}>

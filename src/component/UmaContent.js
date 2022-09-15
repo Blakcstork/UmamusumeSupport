@@ -20,10 +20,6 @@ function UmaContent() {
 
     const newArray = umaDummy;
 
-
-
-
-
     return(
         <div className={styles.contents}>
             <p>도-모. 캐릭터 내용입니다.</p>
