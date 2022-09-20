@@ -2,7 +2,7 @@ import Header from "../component/Header";
 import Footer from "../component/Footer";
 import MainContent from "../component/MainContent";
 
-import styles from "../css/Main.module.css"
+import styles from "../css/Home.module.css"
 
 function Main(){
     return(

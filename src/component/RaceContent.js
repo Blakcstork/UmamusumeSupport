@@ -75,7 +75,7 @@ function RaceContent(){
             <SearchInput setData = {setData}/>
             </div>
             <DetailSearchRace setArray = {setArray}/>
-            <div className={styles.resultLength}><p>검색 결과 : {newArray2.length()}건</p></div>
+            <div className={styles.resultLength}><p>검색 결과 : {newArray2.length}건</p></div>
 
             <div>
             <ul>

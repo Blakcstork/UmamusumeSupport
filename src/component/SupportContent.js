@@ -40,6 +40,7 @@ function SupportContent() {
             <DetailSupportModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {popup.info}/>
             <DetailSearchSupport setArray = {setArray}/>
             <SearchInput setData={setData}/>
+            <div className={styles.resultLength}><p>검색 결과 : {newArray2.length}건</p></div>
             <div className={styles.supportListDiv}>
                     {
                         newArray2.map((support) => 
