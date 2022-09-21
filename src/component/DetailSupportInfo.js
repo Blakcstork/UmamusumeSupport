@@ -1,4 +1,7 @@
 import {useEffect} from "react"
+import {HotTable} from '@handsontable/react';
+import { registerAllModules } from 'handsontable/registry';
+
 import Accordion from "react-bootstrap/Accordion"
 
 import styles from "../css/DetailSupportInfo.module.css"
@@ -7,10 +10,10 @@ import skillDummy from "../tempServer/skill.json"
 
 
 
+
 function SkillAccordion({oSkills, eSkills}){
 
 
-    
 
     return (
         <Accordion defaultActiveKey="0" alwaysOpen>
@@ -18,23 +21,13 @@ function SkillAccordion({oSkills, eSkills}){
           <Accordion.Item eventKey="0">
             <Accordion.Header>OwnSkill Here</Accordion.Header>
             <Accordion.Body>
-              {oSkills.map((skill) => 
-                <div>
-                  {skill}
-                </div>
-              
-              )}
+              ownskill
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
             <Accordion.Header>EventSkill Here</Accordion.Header>
             <Accordion.Body>
-            {eSkills.map((skill) => 
-                <div>
-                  {skill}
-                </div>
-              
-              )}
+              eskill
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
@@ -61,6 +54,14 @@ function EventAccordion({supportName}){
 
 function DetailSupportInfo({info}){
 
+    registerAllModules();
+    const hotData = [
+      ["", "Tesla", "Volvo", "Toyota", "Honda"],
+      ["2020", 10, 11, 12, 13],
+      ["2021", 20, 11, 14, 13],
+      ["2022", 30, 15, 12, 13]
+    ];
+
     let nickname, name, img = "";
     let oSkills, eSkills = [];
     let events = [];
@@ -83,6 +84,15 @@ function DetailSupportInfo({info}){
         <div className={styles.detailSupportInfo}>
             <div className = {styles.detailSupportImg}>
               {`${nickname}, ${name}`}
+            </div>
+            <div className = {styles.hotTable}>
+              <HotTable 
+                      data={hotData}
+                      colHeaders={true}
+                      rowHeaders={true}
+                      height='auto'
+                      licenseKey="non-commercial-and-evaluation"
+              />
             </div>
             <div className = {styles.detailSupportFunc}>
                 allFunctions

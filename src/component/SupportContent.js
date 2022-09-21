@@ -26,7 +26,7 @@ function SupportContent() {
     const [array, setArray] = useState([[], [], [], []])
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
 
-    const newArray2 = supportDummy.filter((d) => d.name.includes(data) && (array[0].includes) && d.rarity === (array[1]))
+    const newArray2 = supportDummy.filter((d) => d.name.includes(data))
 
 
     const onClickList = (e, support) => {

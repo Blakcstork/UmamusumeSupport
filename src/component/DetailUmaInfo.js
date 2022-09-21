@@ -1,4 +1,5 @@
 import Accordion from "react-bootstrap/Accordion"
+import {HotTable} from '@handsontable/react';
 
 import styles from "../css/DetailUmaInfo.module.css"
 
