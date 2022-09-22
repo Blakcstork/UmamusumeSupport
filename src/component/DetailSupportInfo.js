@@ -85,7 +85,7 @@ function DetailSupportInfo({info}){
             <div className = {styles.detailSupportImg}>
               {`${nickname}, ${name}`}
             </div>
-            <div className = {styles.hotTable}>
+            <div className = {styles.detailSupportFunc}>
               <HotTable 
                       data={hotData}
                       colHeaders={true}
@@ -93,9 +93,6 @@ function DetailSupportInfo({info}){
                       height='auto'
                       licenseKey="non-commercial-and-evaluation"
               />
-            </div>
-            <div className = {styles.detailSupportFunc}>
-                allFunctions
             </div>
             <div className = {styles.detailSupportSkill}>
                 <SkillAccordion oSkills={oSkills}/>
