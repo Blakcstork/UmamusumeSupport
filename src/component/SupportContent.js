@@ -26,12 +26,29 @@ function SupportContent() {
     const [array, setArray] = useState([[], [], [], []])
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
 
+    const isInclude = (e, d) => {
+        let r = true;
+
+        for(let i = 0 ; i < e.length; i++){
+            if(d.includes(e[i])){
+                r = true;
+            }
+            else{
+                r = false;
+            }
+        }
+
+        return r;
+    } // 배열의 포함관계 확인하는 함수
+
+
     const searchFilter = (e) => {
         return e.filter((d)=> 
         d.name.includes(data) &&
         d.type.includes(array[0]) &&
-        d.rarity.includes(array[1])
-        
+        d.rarity.includes(array[1]) &&
+        isInclude(array[2], d.runType) &&
+        isInclude(array[3], d.distanceType) 
         )
     }
 
