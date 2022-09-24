@@ -18,7 +18,24 @@ function UmaContent() {
     const [data, setData] = useState("");
     const [array, setArray] = useState([[], [], [], []])
 
+    const isInclude = (e, d) => {
+        let r = true;
+
+        for(let i = 0 ; i < e.length; i++){
+            if(d.includes(e[i])){
+                r = true;
+            }
+            else{
+                r = false;
+            }
+        }
+
+        return r;
+    } // e가 d에 완전히 포함되는지 배열의 포함관계 확인하는 함수
+
     const newArray = umaDummy;
+
+
 
     return(
         <div className={styles.contents}>

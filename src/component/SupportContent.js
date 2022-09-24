@@ -39,7 +39,7 @@ function SupportContent() {
         }
 
         return r;
-    } // 배열의 포함관계 확인하는 함수
+    } // e가 d에 완전히 포함되는지 배열의 포함관계 확인하는 함수
 
 
     const searchFilter = (e) => {
@@ -52,7 +52,7 @@ function SupportContent() {
         )
     }
 
-    const newArray2 = searchFilter(supportDummy);
+    const newArray = searchFilter(supportDummy);
 
 
     const onClickList = (e, support) => {
@@ -66,10 +66,10 @@ function SupportContent() {
             <DetailSupportModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {popup.info}/>
             <DetailSearchSupport setArray = {setArray}/>
             <SearchInput setData={setData}/>
-            <div className={styles.resultLength}><p>검색 결과 : {newArray2.length}건</p></div>
+            <div className={styles.resultLength}><p>검색 결과 : {newArray.length}건</p></div>
             <div className={styles.supportListDiv}>
                     {
-                        newArray2.map((support) => 
+                        newArray.map((support) => 
                             <div onClick = {(e)=> {onClickList(e, support)}}>
                             <SupportList name = {support.name} nickname = {support.nickname}/>
                             </div>

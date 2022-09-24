@@ -229,7 +229,7 @@ function DetailSearchSupport({setArray}){
                                             onChange = {onChange}
                                             onClick = {onClick}
                                        />
-                                        <img src = {kind.img} alt = {kind.name}></img>
+                                        <img src = {kind.img} alt = {kind.name} className = {styles.inputImg}></img>
                                     </label>
                                 ))
                             }                           

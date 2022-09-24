@@ -13,4 +13,11 @@
     background-color: white;
 }
 
+.input_hidden{
+    display:none;   
+}
 
+.inputImg{
+    width : 35px;
+    height : 35px;
+}
