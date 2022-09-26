@@ -1,5 +1,8 @@
 import {useState} from 'react';
 
+import SearchInput from '../component/SearchInput'
+
+
 import styles from "../css/MainContent.module.css";
 
 import raceDummy from "../tempServer/race.json"
@@ -9,7 +12,14 @@ import umaDummy from "../tempServer/uma.json"
 
 function MainContent(){
     const [sup, setSup] = useState("");
-    
+    const typeKind =[
+        {name : "speed", img : "/images/types/i_type1.png"},
+        {name : "stamina", img : "/images/types/i_type2.png"},
+        {name : "power", img : "/images/types/i_type3.png"},
+        {name : "gonjo", img : "/images/types/i_type4.png"},
+        {name : "knowledge", img : "/images/types/i_type5.png"},
+        {name : "friend", img : "/images/types/i_type6.png"}
+    ];
     
 
     return(
