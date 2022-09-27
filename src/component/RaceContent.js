@@ -69,7 +69,7 @@ function RaceContent(){
     return(
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
-            <RacePlanner />
+            <RacePlanner season = {"주니어"}/>
             <DetailRaceModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
             <SearchInput setData = {setData}/>

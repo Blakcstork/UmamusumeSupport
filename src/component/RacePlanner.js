@@ -119,7 +119,7 @@ function RacePlanner({season}){
             <table  className={styles.planTable}>
                 <thead>
                     <tr>
-                        <th>주니어</th>
+                        <th>{season}</th>
                         <th><button onClick={(e) => {localStorage.clear(); setReset(reset+1);}}>초기화</button></th>
 
                     </tr>
