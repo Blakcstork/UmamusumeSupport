@@ -32,6 +32,7 @@ function RaceContent(){
 
     const [data, setData] = useState("");
     const [r, setR] = useState(0);
+    const [season, setSeason] = useState("주니어");
     const [array, setArray] = useState(["", "", "", ""]);
     const [info, setInfo] = useState([]);
     const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
@@ -52,6 +53,10 @@ function RaceContent(){
         console.log(localStorage.getItem(`${params.month}${params.day}`))
     }
 
+    const onClickChangeSeason = (e) => {
+
+    }
+
     const openPopup = (e) => {
         setPopup({open: true, title: "Hello", message : "Hello Sucker" })
     }
@@ -69,6 +74,11 @@ function RaceContent(){
     return(
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
+            <div>
+                <button>주니어</button>
+                <button>클래식</button>
+                <button>시니어</button>
+            </div>
             <RacePlanner season = {"주니어"}/>
             <DetailRaceModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
