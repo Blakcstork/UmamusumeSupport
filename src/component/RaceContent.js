@@ -48,13 +48,13 @@ function RaceContent(){
     }
 
     const onClickSave = (e, params) => {
-        localStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
+        localStorage.setItem(`${params.period}${params.month}${params.day}`, JSON.stringify(params))
         setR(r + 1)
-        console.log(localStorage.getItem(`${params.month}${params.day}`))
+        console.log(localStorage.getItem(`${params.period}${params.month}${params.day}`))
     }
 
     const onClickChangeSeason = (e) => {
-
+        setSeason(e.target.value);
     }
 
     const openPopup = (e) => {
@@ -75,11 +75,11 @@ function RaceContent(){
         <div className={styles.contents}>
             <p>도-모 헤더=상, 푸터=상. 여기는 컨텐츠입니다.</p>
             <div>
-                <button>주니어</button>
-                <button>클래식</button>
-                <button>시니어</button>
+                <button onClick={(e) => onClickChangeSeason(e)} value = "주니어">주니어</button>
+                <button onClick={(e) => onClickChangeSeason(e)} value = "클래식">클래식</button>
+                <button onClick={(e) => onClickChangeSeason(e)} value = "시니어">시니어</button>
             </div>
-            <RacePlanner season = {"주니어"}/>
+            <RacePlanner season = {season}/>
             <DetailRaceModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} info = {info}/>
             <div>
             <SearchInput setData = {setData}/>

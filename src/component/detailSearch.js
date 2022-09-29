@@ -73,9 +73,9 @@ function DetailSearchRace({setArray}){
                     <tr>
                         <td>시즌</td>
                         <td>
-                            <label><input type = "radio" name = "season" value = "junior" onChange = {onChange}/> 주니어 </label>
-                            <label><input type = "radio" name = "season" value = "classic" onChange = {onChange}/> 클래식 </label>  
-                            <label><input type = "radio" name = "season" value = "senior" onChange = {onChange}/> 시니어 </label>                             
+                            <label><input type = "radio" name = "season" value = "주니어" onChange = {onChange}/> 주니어 </label>
+                            <label><input type = "radio" name = "season" value = "클래식" onChange = {onChange}/> 클래식 </label>  
+                            <label><input type = "radio" name = "season" value = "시니어" onChange = {onChange}/> 시니어 </label>                             
                         </td>
                     </tr>
                     <tr>

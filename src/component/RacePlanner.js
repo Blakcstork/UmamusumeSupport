@@ -97,17 +97,16 @@ function RacePlanner({season}){
     const [selected, setSelected] = useState (null);
 
     const onClick = (e, month, day) => {
-        setPopup({open: true, title : `${month}월 ${day}반`, message : "Hello!"})
+        setPopup({open: true, title : `${season} ${month}월 ${day}반`, message : "Hello!"})
         setMonth(month);
         setDay(day);
-        setSelected(localStorage.getItem(`${month}${day}`))
+        setSelected(localStorage.getItem(`${season}${month}${day}`))
 
         console.log("onClick activated")
     }
 
 
     const isSelected = (e) =>{
-      console.log("isSelected call")
       return (localStorage.getItem(e) === null)
     }
 
@@ -135,12 +134,12 @@ function RacePlanner({season}){
                         <td>3월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,1,"전")}> { isSelected("1전") ? <img src = "/images/icons/plus.png" alt="1" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("1전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,1,"후")}> { isSelected("1후") ? <img src = "/images/icons/plus.png" alt="2" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("1후")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,2,"전")}> { isSelected("2전") ? <img src = "/images/icons/plus.png" alt="3" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("2전")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,2,"후")}> { isSelected("2후") ? <img src = "/images/icons/plus.png" alt="4" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("2후")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,3,"전")}> { isSelected("3전") ? <img src = "/images/icons/plus.png" alt="5" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("3전")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,3,"후")}> { isSelected("3후") ? <img src = "/images/icons/plus.png" alt="6" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("3후")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,1,"전")}> { isSelected(`${season}1전`) ? <img src = "/images/icons/plus.png" alt="1" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}1전`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,1,"후")}> { isSelected(`${season}1후`) ? <img src = "/images/icons/plus.png" alt="2" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}1후`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,2,"전")}> { isSelected(`${season}2전`) ? <img src = "/images/icons/plus.png" alt="3" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}2전`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,2,"후")}> { isSelected(`${season}2후`) ? <img src = "/images/icons/plus.png" alt="4" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}2후`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,3,"전")}> { isSelected(`${season}3전`) ? <img src = "/images/icons/plus.png" alt="5" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}3전`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,3,"후")}> { isSelected(`${season}3후`) ? <img src = "/images/icons/plus.png" alt="6" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}3후`)).grade}/>} </td>
                     </tr>
                     <tr className={styles.pNames}>
                         <td>4월 전</td>
@@ -151,12 +150,12 @@ function RacePlanner({season}){
                         <td>6월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,4,"전")}> { isSelected("4전") ? <img src = "/images/icons/plus.png" alt="7" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("4전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,4,"후")}> { isSelected("4후") ? <img src = "/images/icons/plus.png" alt="8" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("4후")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,5,"전")}> { isSelected("5전") ? <img src = "/images/icons/plus.png" alt="9" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("5전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,5,"후")}> { isSelected("5후") ? <img src = "/images/icons/plus.png" alt="10" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("5후")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,6,"전")}> { isSelected("6전") ? <img src = "/images/icons/plus.png" alt="11" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("6전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,6,"후")}> { isSelected("6후") ? <img src = "/images/icons/plus.png" alt="12" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("6후")).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,4,"전")}> { isSelected(`${season}4전`) ? <img src = "/images/icons/plus.png" alt="7" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}4전`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,4,"후")}> { isSelected(`${season}4후`) ? <img src = "/images/icons/plus.png" alt="8" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}4후`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,5,"전")}> { isSelected(`${season}5전`) ? <img src = "/images/icons/plus.png" alt="9" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}5전`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,5,"후")}> { isSelected(`${season}5후`) ? <img src = "/images/icons/plus.png" alt="10" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}5후`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,6,"전")}> { isSelected(`${season}6전`) ? <img src = "/images/icons/plus.png" alt="11" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}6전`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,6,"후")}> { isSelected(`${season}6후`) ? <img src = "/images/icons/plus.png" alt="12" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}6후`)).grade}/>}</td>
                     </tr>
                     <tr className={styles.pNames}> 
                         <td>7월 전</td>
@@ -167,12 +166,12 @@ function RacePlanner({season}){
                         <td>9월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,7,"전")}> { isSelected("7전") ? <img src = "/images/icons/plus.png" alt="13" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("7전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,7,"후")}> { isSelected("7후") ? <img src = "/images/icons/plus.png" alt="14" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("7후")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,8,"전")}> { isSelected("8전") ? <img src = "/images/icons/plus.png" alt="15" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("8전")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,8,"후")}> { isSelected("8후") ? <img src = "/images/icons/plus.png" alt="16" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("8후")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,9,"전")}> { isSelected("9전") ? <img src = "/images/icons/plus.png" alt="17" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("9전")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,9,"후")}> { isSelected("9후") ? <img src = "/images/icons/plus.png" alt="18" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("9후")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,7,"전")}> { isSelected(`${season}7전`) ? <img src = "/images/icons/plus.png" alt="13" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}7전`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,7,"후")}> { isSelected(`${season}7후`) ? <img src = "/images/icons/plus.png" alt="14" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}7후`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,8,"전")}> { isSelected(`${season}8전`) ? <img src = "/images/icons/plus.png" alt="15" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}8전`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,8,"후")}> { isSelected(`${season}8후`) ? <img src = "/images/icons/plus.png" alt="16" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}8후`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,9,"전")}> { isSelected(`${season}9전`) ? <img src = "/images/icons/plus.png" alt="17" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}9전`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,9,"후")}> { isSelected(`${season}9후`) ? <img src = "/images/icons/plus.png" alt="18" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}9후`)).grade}/>} </td>
                     </tr>
                     <tr className={styles.pNames}>
                         <td>10월 전</td>
@@ -183,12 +182,12 @@ function RacePlanner({season}){
                         <td>12월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,10,"전")}> { isSelected("10전") ? <img src = "/images/icons/plus.png" alt="19" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("10전")).grade}/>}</td>
-                        <td onClick = {(e) => onClick(e,10,"후")}> { isSelected("10후") ? <img src = "/images/icons/plus.png" alt="20" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("10후")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,11,"전")}> { isSelected("11전") ? <img src = "/images/icons/plus.png" alt="21" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("11전")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,11,"후")}> { isSelected("11후") ? <img src = "/images/icons/plus.png" alt="22" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("11후")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,12,"전")}> { isSelected("12전") ? <img src = "/images/icons/plus.png" alt="23" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("12전")).grade}/>} </td>
-                        <td onClick = {(e) => onClick(e,12,"후")}> { isSelected("12후") ? <img src = "/images/icons/plus.png" alt="24" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem("12후")).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,10,"전")}> { isSelected(`${season}10전`) ? <img src = "/images/icons/plus.png" alt="19" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}10전`)).grade}/>}</td>
+                        <td onClick = {(e) => onClick(e,10,"후")}> { isSelected(`${season}10후`) ? <img src = "/images/icons/plus.png" alt="20" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}10후`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,11,"전")}> { isSelected(`${season}11전`) ? <img src = "/images/icons/plus.png" alt="21" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}11전`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,11,"후")}> { isSelected(`${season}11후`) ? <img src = "/images/icons/plus.png" alt="22" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}11후`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,12,"전")}> { isSelected(`${season}12전`) ? <img src = "/images/icons/plus.png" alt="23" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}12전`)).grade}/>} </td>
+                        <td onClick = {(e) => onClick(e,12,"후")}> { isSelected(`${season}12후`) ? <img src = "/images/icons/plus.png" alt="24" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}12후`)).grade}/>} </td>
                     </tr>
                 </tbody>
             </table>
