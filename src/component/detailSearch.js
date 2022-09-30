@@ -2,7 +2,6 @@ import {useState} from "react"
 
 import { SmallGradeButton } from "./GradeButton";
 
-
 import dummy from "../tempServer/race.json"
 
 import styles from "../css/DetailSearch.module.css"

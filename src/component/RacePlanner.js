@@ -10,8 +10,7 @@ import { SmallGradeButton } from "./GradeButton";
 
 
 
-function PlannerModal({open, setPopup, message, title, callback, smonth, sday, selected}) {
-    //setItem(JSON.parse(localStorage.getItem(`${smonth}${sday}`)));
+function PlannerModal({open, setPopup, message, title, callback, season, smonth, sday, selected}) {
     
     let temp = [];
     if(selected === null){
@@ -29,9 +28,10 @@ function PlannerModal({open, setPopup, message, title, callback, smonth, sday, s
       }
     }
 
-    const newArray3 = dummy.filter((e) => e.month === smonth && e.day.includes(sday));
+    const newArray3 = dummy.filter((e) => e.period === season && e.month === smonth && e.day.includes(sday));
+
     const onClick = (e, params) => {
-      localStorage.setItem(`${params.month}${params.day}`, JSON.stringify(params))
+      localStorage.setItem(`${season}${params.month}${params.day}`, JSON.stringify(params))
       handleClose();
     }
 
@@ -101,8 +101,6 @@ function RacePlanner({season}){
         setMonth(month);
         setDay(day);
         setSelected(localStorage.getItem(`${season}${month}${day}`))
-
-        console.log("onClick activated")
     }
 
 
@@ -114,7 +112,7 @@ function RacePlanner({season}){
 
     return (
         <div>
-            <PlannerModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} smonth = {smonth} sday = {sday} selected = {selected}/>
+            <PlannerModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} season = {season} smonth = {smonth} sday = {sday} selected = {selected}/>
             <table  className={styles.planTable}>
                 <thead>
                     <tr>
