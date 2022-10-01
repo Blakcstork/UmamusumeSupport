@@ -17,78 +17,78 @@
                 "name" : "호프풀 S에서 5착 이내",
                 "race" : "호프풀 스테이크스",
                 "needRank" : 5,
-                "deadline" : ""
+                "deadline" : "주니어 12 후"
             },
             {
                 "name" : "사츠키상에서 5착 이내",
                 "race" : "사츠키상",
                 "needRank" : 5,
-                "deadline" : ""
+                "deadline" : "클래식 4 전"
             },
             {
                 "name" : "일본 더비에서 5착 이내",
                 "race" : "일본 더비(도쿄 우준)",
                 "needRank" : 5,
-                "deadline" : ""
+                "deadline" : "클래식 5 후"
             },
             {
                 "name" : "국화상에 출전",
                 "race" : "국화상",
                 "needRank" : 0,
-                "deadline" : ""
+                "deadline" : "클래식 10 후"
             },
             {
                 "name" : "닛케이상에서 1착",
                 "race" : "닛케이상",
                 "needRank" : 1,
-                "deadline" : ""
+                "deadline" : "시니어 3 후"
             },
             {
                 "name" : "텐노상(봄)에서 3착 이내",
                 "race" : "텐노상(봄)",
                 "needRank" : 3,
-                "deadline" : ""
+                "deadline" : "시니어 4 후"
             },
             {
                 "name" : "텐노상(가을)에서 1착",
                 "race" : "텐노상(가을)",
                 "needRank" : 1,
-                "deadline" : ""
+                "deadline" : "시니어 10 후"
             },
             {
                 "name" : "아리마 기념에서 1착",
                 "race" : "아리마 기념",
                 "needRank" : 1,
-                "deadline" : ""
+                "deadline" : "시니어 12 후"
             }
         ]
 
     },
     {
-        "nickname" : "Nevertheless",
-        "name" : "나리타 타이신",
+        "nickname" : "피유 에클레르",
+        "name" : "카렌짱",
         "rarity" : 3,
         "img" : "",
         "trackType" : {"grass" : "A", "dirt" : "F"},
         "distanceType" : {"단거리" : "F", "마일" : "D", "중거리" : "A", "장거리" : "A"},
         "runType"  : {"도주" : "G", "선행" : "F", "선입" : "B", "추입" : "A"},
-        "stat" : {"스피드" : 96, "스태미나" : 82, "파워" : 99, "근성" : 79, "지능" : 94},
+        "stat" : {"스피드" : 97, "스태미나" : 58, "파워" : 99, "근성" : 107, "지능" : 97},
         "uniqueSkill" : {"name" : "Nemesis", "description" : "최종 코너에서 집단의 후방 위치에서 앞으로 나갈 때, 돌파력이 더욱 날카로워져 속도가 상승한다"},
         "ownSkill" : ["고독한 늑대", "후방 대기", "속삭임"],
-        "grown" : {"스피드" : 10, "스태미나" : 0, "파워" : 0, "근성" : 20, "지능" : 0},
+        "grown" : {"스피드" : 10, "스태미나" : 0, "파워" : 20, "근성" : 0, "지능" : 0},
         "awakenSkill" : ["직선 주파", "잠자는 사자", "추입 직선", "육박하는 그림자"],
         "goal" : [
             {
-                "name" : "호프풀 S에서 5착 이내",
-                "race" : "호프풀 스테이크스",
-                "needRank" : 5,
-                "deadline" : ""
+                "name" : "팬을 3천명 모은다.",
+                "race" : "",
+                "needRank" : 0,
+                "deadline" : "주니어 12 전"
             },
             {
                 "name" : "사츠키상에서 5착 이내",
-                "race" : "사츠키상",
+                "race" : "필리스 레뷰",
                 "needRank" : 5,
-                "deadline" : ""
+                "deadline" : "클래식 3 전"
             },
             {
                 "name" : "일본 더비에서 5착 이내",

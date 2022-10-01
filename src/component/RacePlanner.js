@@ -43,16 +43,24 @@ function PlannerModal({open, setPopup, message, title, callback, season, smonth,
           </Modal.Header>
           <Modal.Body>
             <div className = {styles.currentRace}>
-            <SmallRaceList
-                        coverImg={temp.img}
-                        name = {temp.name}
-                        grade = {temp.grade}
-                        distance = {temp.distance}
-                        require = {temp.require}
-                        type = {temp.type}
-                        curve = {temp.curve}
-                        fan = {temp.fan}
-                  />
+              {
+                selected === null ?
+                <div className={styles.nullCurrentRace}>
+                  there's no race!
+                </div>
+                  :
+                <SmallRaceList
+                coverImg={temp.img}
+                name = {temp.name}
+                grade = {temp.grade}
+                distance = {temp.distance}
+                require = {temp.require}
+                type = {temp.type}
+                curve = {temp.curve}
+                fan = {temp.fan}
+                />
+              }
+
             </div>
             <div className={styles.boldLine}></div>
           {
