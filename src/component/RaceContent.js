@@ -25,6 +25,39 @@ function DistanceTranslate(distance){
 
 
 
+function RaceArticle({newArray2, onClick, onClickSave}){
+
+    
+
+    return (
+        <div>
+        <ul>
+            {
+                newArray2.map((race) =>
+                    <li>
+                        <RaceList
+                        coverImg={race.img}
+                        name = {race.name}
+                        grade = {race.grade}
+                        distance = {race.distance}
+                        require = {race.require}
+                        type = {race.type}
+                        curve = {race.curve}
+                        fan = {race.fan}
+                        onClick={(e) => {onClick(e, race)}}
+                        />
+                        <button onClick = {(e) => {onClickSave(e,race)}}> + </button>
+                    </li> 
+                )
+
+            }
+        </ul>
+        </div>
+    )
+
+}
+
+
 
 
 
@@ -50,7 +83,6 @@ function RaceContent(){
     const onClickSave = (e, params) => {
         localStorage.setItem(`${params.period}${params.month}${params.day}`, JSON.stringify(params))
         setR(r + 1)
-        console.log(localStorage.getItem(`${params.period}${params.month}${params.day}`))
     }
 
     const onClickChangeSeason = (e) => {
@@ -64,10 +96,6 @@ function RaceContent(){
     const newArray2 = dummy.filter((e)=> e.name.includes(data) && (DistanceTranslate(e.distance).includes(array[0]) && e.type.includes(array[1]) && e.period.includes(array[2]) && e.grade.includes(array[3])))
 
 
-
-
-
-    
 
 
 
@@ -86,30 +114,7 @@ function RaceContent(){
             </div>
             <DetailSearchRace setArray = {setArray}/>
             <div className={styles.resultLength}><p>검색 결과 : {newArray2.length}건</p></div>
-
-            <div>
-            <ul>
-                {
-                    newArray2.map((race) =>
-                        <li>
-                            <RaceList
-                            coverImg={race.img}
-                            name = {race.name}
-                            grade = {race.grade}
-                            distance = {race.distance}
-                            require = {race.require}
-                            type = {race.type}
-                            curve = {race.curve}
-                            fan = {race.fan}
-                            onClick={(e) => {onClick(e, race)}}
-                            />
-                            <button onClick = {(e) => {onClickSave(e,race)}}> + </button>
-                        </li> 
-                    )
-
-                }
-            </ul>
-            </div>
+            <RaceArticle newArray2 = {newArray2} onClick = {onClick} onClickSave = {onClickSave}/>
 
         </div>
     )

@@ -1,12 +1,52 @@
 import {useEffect, useState} from "react";
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 
 import {SmallRaceList} from "./RaceList";
 
 import styles from "../css/RacePlanner.module.css";
 import dummy from "../tempServer/race.json";
+import umaDummy from "../tempServer/uma.json"
 import { SmallGradeButton } from "./GradeButton";
+
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
+
+function UmaSelectModal({open, setPopup, message, title, callback, season, smonth, sday, selected}){
+
+
+  const handleClose = () => {
+    setPopup({open: false});
+    if(callback){
+      callback();
+    }
+  }
+
+
+
+  return (
+    <>
+      <Modal show={open} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {
+            umaDummy.map((e) => 
+              <div className = {styles.smallUmaIcon}>
+                {e.name}
+              </div>   
+            )
+          }
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={handleClose}>
+            OK
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
 
 
 
@@ -99,6 +139,7 @@ function PlannerModal({open, setPopup, message, title, callback, season, smonth,
 
 function RacePlanner({season}){
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
+    const [popup2, setPopup2] = useState({open : false, title : "", message: "", callback : false});
     const [smonth, setMonth] = useState("");
     const [sday, setDay] = useState("");
     const [reset, setReset] = useState(0);
@@ -111,6 +152,9 @@ function RacePlanner({season}){
         setSelected(localStorage.getItem(`${season}${month}${day}`))
     }
 
+    const onClickPlan = (e) => {
+      }
+
 
     const isSelected = (e) =>{
       return (localStorage.getItem(e) === null)
@@ -121,6 +165,9 @@ function RacePlanner({season}){
     return (
         <div>
             <PlannerModal open = {popup.open} setPopup = {setPopup} message = {popup.message} title = {popup.title} callback = {popup.callback} season = {season} smonth = {smonth} sday = {sday} selected = {selected}/>
+            <div>
+
+            </div>
             <table  className={styles.planTable}>
                 <thead>
                     <tr>
