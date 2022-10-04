@@ -134,6 +134,16 @@ function PlannerModal({open, setPopup, message, title, callback, season, smonth,
 
 
 
+function PlannerBlock({onClick, mon, day, season, isSelected}){
+
+  return (
+    <td onClick = {(e) => onClick(e,mon,day)}>
+        { isSelected(`${season}${mon}${day}`) ? <img src = "/images/icons/plus.png"/> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}${mon}${day}`)).grade}/>}      
+    </td>
+  )
+
+}
+
 
 
 
@@ -153,7 +163,8 @@ function RacePlanner({season}){
     }
 
     const onClickPlan = (e) => {
-      }
+
+    }
 
 
     const isSelected = (e) =>{
@@ -187,7 +198,7 @@ function RacePlanner({season}){
                         <td>3월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <td onClick = {(e) => onClick(e,1,"전")}> { isSelected(`${season}1전`) ? <img src = "/images/icons/plus.png" alt="1" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}1전`)).grade}/>}</td>
+                        <PlannerBlock onClick={onClick} mon = {`1`} day = {`전`} season = {season} isSelected = {isSelected}/>
                         <td onClick = {(e) => onClick(e,1,"후")}> { isSelected(`${season}1후`) ? <img src = "/images/icons/plus.png" alt="2" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}1후`)).grade}/>} </td>
                         <td onClick = {(e) => onClick(e,2,"전")}> { isSelected(`${season}2전`) ? <img src = "/images/icons/plus.png" alt="3" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}2전`)).grade}/>} </td>
                         <td onClick = {(e) => onClick(e,2,"후")}> { isSelected(`${season}2후`) ? <img src = "/images/icons/plus.png" alt="4" /> : <SmallGradeButton grade = {JSON.parse(localStorage.getItem(`${season}2후`)).grade}/>} </td>
