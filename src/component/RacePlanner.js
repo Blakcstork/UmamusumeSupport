@@ -51,7 +51,7 @@ function UmaSelectModal({open, setPopup, message, title, callback, season, smont
 
 
 function PlannerModal({open, setPopup, message, title, callback, season, smonth, sday, selected}) {
-    
+  
     let temp = [];
     if(selected === null){
       temp = [];
@@ -68,8 +68,8 @@ function PlannerModal({open, setPopup, message, title, callback, season, smonth,
       }
     }
 
-    const newArray3 = dummy.filter((e) => e.period === season && e.month === smonth && e.day.includes(sday));
-
+    const newArray3 = dummy.filter((e) =>e.period === season &&  e.month === smonth && e.day.includes(sday));
+    console.log(newArray3);
     const onClick = (e, params) => {
       localStorage.setItem(`${season}${params.month}${params.day}`, JSON.stringify(params))
       handleClose();
@@ -150,7 +150,7 @@ function PlannerBlock({onClick, mon, day, season, isSelected}){
 function RacePlanner({season}){
     const [popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
     const [popup2, setPopup2] = useState({open : false, title : "", message: "", callback : false});
-    const [smonth, setMonth] = useState("");
+    const [smonth, setMonth] = useState(0);
     const [sday, setDay] = useState("");
     const [reset, setReset] = useState(0);
     const [selected, setSelected] = useState (null);
@@ -160,7 +160,6 @@ function RacePlanner({season}){
         setMonth(month);
         setDay(day);
         setSelected(localStorage.getItem(`${season}${month}${day}`))
-        console.log("isclicked!")
     }
 
 
@@ -196,12 +195,12 @@ function RacePlanner({season}){
                         <td>3월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <PlannerBlock onClick={onClick} mon = {`1`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`1`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`2`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`2`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`3`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`3`} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {1} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {1} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {2} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {2} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {3} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {3} day = {`후`} season = {season} isSelected = {isSelected}/>
                       
                     </tr>
                     <tr className={styles.pNames}>
@@ -213,12 +212,12 @@ function RacePlanner({season}){
                         <td>6월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <PlannerBlock onClick={onClick} mon = {`4`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`4`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`5`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`5`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`6`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`6`} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {4} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {4} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {5} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {5} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {6} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {6} day = {`후`} season = {season} isSelected = {isSelected}/>
                     </tr>
                     <tr className={styles.pNames}> 
                         <td>7월 전</td>
@@ -229,12 +228,12 @@ function RacePlanner({season}){
                         <td>9월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <PlannerBlock onClick={onClick} mon = {`7`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`7`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`8`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`8`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`9`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`9`} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {7} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {7} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {8} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {8} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {9} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {9} day = {`후`} season = {season} isSelected = {isSelected}/>
                     </tr>
                     <tr className={styles.pNames}>
                         <td>10월 전</td>
@@ -245,12 +244,12 @@ function RacePlanner({season}){
                         <td>12월 후</td>
                     </tr>
                     <tr className= {styles.pContents}>
-                        <PlannerBlock onClick={onClick} mon = {`10`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`10`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`11`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`11`} day = {`후`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`12`} day = {`전`} season = {season} isSelected = {isSelected}/>
-                        <PlannerBlock onClick={onClick} mon = {`12`} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {10} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {10} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {11} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {11} day = {`후`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {12} day = {`전`} season = {season} isSelected = {isSelected}/>
+                        <PlannerBlock onClick={onClick} mon = {12} day = {`후`} season = {season} isSelected = {isSelected}/>
                     </tr>
                 </tbody>
             </table>
