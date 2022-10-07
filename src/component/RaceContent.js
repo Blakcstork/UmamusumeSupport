@@ -27,8 +27,6 @@ function DistanceTranslate(distance){
 
 function RaceArticle({newArray2, onClick, onClickSave}){
 
-    
-
     return (
         <div>
         <ul>

@@ -1,7 +1,5 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Main from "./routes/Main";
-import Movie from "./routes/Movie";
-import Movies from "./routes/Movies";
 import Home from "./routes/Home";
 import Support from "./routes/Support";
 import Uma from "./routes/Uma";
