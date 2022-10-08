@@ -1,7 +1,6 @@
 import {useState} from "react"
 import SearchInput from "./SearchInput.js";
 import {DetailSearchRace} from "./DetailSearch.js";
-import {GradeButton} from "./GradeButton.js";
 import DetailRaceModal from "./DetailRaceModal.js";
 import RacePlanner from "./RacePlanner.js";
 import {RaceList} from "./RaceList.js";
@@ -47,7 +46,6 @@ function RaceArticle({newArray2, onClick, onClickSave}){
                         <button onClick = {(e) => {onClickSave(e,race)}}> + </button>
                     </li> 
                 )
-
             }
         </ul>
         </div>
@@ -67,10 +65,6 @@ function RaceContent(){
     const [array, setArray] = useState(["", "", "", ""]);
     const [info, setInfo] = useState([]);
     const[popup, setPopup] = useState({open : false, title : "", message: "", callback : false});
-    const[planner, setPlanner] = useState("junior");
-
-
-
 
 
     const onClick = (e, params) => {

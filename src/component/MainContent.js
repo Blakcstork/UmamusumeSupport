@@ -2,7 +2,6 @@ import {useState} from 'react';
 
 import SearchInput from '../component/SearchInput'
 
-
 import styles from "../css/MainContent.module.css";
 
 import raceDummy from "../tempServer/race.json"

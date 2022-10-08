@@ -1,8 +1,5 @@
 import {useState} from "react"
-import dummy from "../tempServer/race.json"
 import styles from "../css/searchInput.module.css"
-
-
 
 
 
@@ -13,8 +10,6 @@ function SearchInput({setData}){
         setText(e.target.value);
         setData(e.target.value);
     }
-
-
 
     return(
 
