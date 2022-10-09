@@ -3,7 +3,6 @@ import {useState} from 'react';
 import SearchInput from '../component/SearchInput'
 
 import styles from "../css/MainContent.module.css";
-
 import raceDummy from "../tempServer/race.json"
 import skillDummy from "../tempServer/skill.json"
 import supportDummy from "../tempServer/support.json"
@@ -11,6 +10,10 @@ import umaDummy from "../tempServer/uma.json"
 
 function MainContent(){
     const [sup, setSup] = useState("");
+
+    const newArray = raceDummy;
+    const newArray2 = skillDummy;
+    const newArray3 = supportDummy;
     const typeKind =[
         {name : "speed", img : "/images/types/i_type1.png"},
         {name : "stamina", img : "/images/types/i_type2.png"},
