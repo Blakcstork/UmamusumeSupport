@@ -1,12 +1,51 @@
 import {useState} from 'react';
 
 import SearchInput from '../component/SearchInput'
+import DetailSupportModal from "../component/DetailSupportModal"
+import DetailUmaModal from "../component/DetailUmaModal"
+
 
 import styles from "../css/MainContent.module.css";
+
+
 import raceDummy from "../tempServer/race.json"
 import skillDummy from "../tempServer/skill.json"
 import supportDummy from "../tempServer/support.json"
 import umaDummy from "../tempServer/uma.json"
+
+
+function SupportList({array}) {
+    return (
+
+        <ul className = {styles.supportList}>
+            {
+                array.map((e) => 
+                    <li className = {styles.supportArticle}> {e.name}</li>
+                )
+            }
+        </ul>
+    )
+
+}
+
+
+
+function UmaList({array}) {
+    return (
+
+        <ul className = {styles.umaList}>
+            {
+                array.map((e) => 
+                    <li className = {styles.umaArticle}> {e.name}</li>
+                )
+            }
+        </ul>
+    )
+
+}
+
+
+
 
 function MainContent(){
     const [sup, setSup] = useState("");
@@ -27,6 +66,9 @@ function MainContent(){
     return(
         <div className={styles.content}>
             <div className = {styles.supportSearch}>
+
+                <SearchInput setData = {setSup}/>
+                <SupportList array = {supportDummy} />
 
             </div>
             <div className = {styles.middle}>

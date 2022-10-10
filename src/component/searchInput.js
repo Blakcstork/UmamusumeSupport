@@ -21,7 +21,6 @@ function SearchInput({setData}){
                 onChange = {onChange}
                 value = {text}                
                 />
-                <button type = "submit"> Go </button>
             </form>
         </div>
     )
