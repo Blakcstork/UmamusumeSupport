@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import SearchInput from '../component/SearchInput'
+import {LittleSearchInput} from '../component/SearchInput'
 import DetailSupportModal from "../component/DetailSupportModal"
 import DetailUmaModal from "../component/DetailUmaModal"
 
@@ -17,13 +17,13 @@ import umaDummy from "../tempServer/uma.json"
 function SupportList({array}) {
     return (
 
-        <ul className = {styles.supportList}>
+        <div className = {styles.supportList}>
             {
                 array.map((e) => 
                     <li className = {styles.supportArticle}> {e.name}</li>
                 )
             }
-        </ul>
+        </div>
     )
 
 }
@@ -67,7 +67,7 @@ function MainContent(){
         <div className={styles.content}>
             <div className = {styles.supportSearch}>
 
-                <SearchInput setData = {setSup}/>
+                <LittleSearchInput setData = {setSup}/>
                 <SupportList array = {supportDummy} />
 
             </div>

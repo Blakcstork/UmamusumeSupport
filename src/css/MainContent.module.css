@@ -35,3 +35,16 @@
     height : 100%;
     background-color: green;
 }
+
+.supportList{
+    width : 100%;
+    height : 100%;
+    overflow: scroll;
+}
+
+.supportArticle{
+    width : 50px;
+    height : 50px;
+    margin-bottom : 10px;
+    background-color : white;
+}

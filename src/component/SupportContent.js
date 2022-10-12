@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SearchInput from "./SearchInput.js";
+import {SearchInput} from "./SearchInput.js";
 import { DetailSearchSupport } from "./DetailSearch.js";
 import DetailSupportModal from "./DetailSupportModal.js";
 

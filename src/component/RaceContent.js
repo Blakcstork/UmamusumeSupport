@@ -1,5 +1,5 @@
 import {useState} from "react"
-import SearchInput from "./SearchInput.js";
+import {SearchInput} from "./SearchInput.js";
 import {DetailSearchRace} from "./DetailSearch.js";
 import DetailRaceModal from "./DetailRaceModal.js";
 import RacePlanner from "./RacePlanner.js";
