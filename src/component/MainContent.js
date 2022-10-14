@@ -46,6 +46,20 @@ function UmaList({array}) {
 
 
 
+function SelectedSupport({selectedArray}){
+    return (
+        <div className={styles.selectedSupportList}>
+            {
+                selectedArray.map((e) => (
+                    <div className={styles.selectedSupportElement}>
+                        this
+                    </div>
+                ))
+            }
+        </div>
+    )
+}
+
 
 function MainContent(){
     const [sup, setSup] = useState("");
@@ -53,6 +67,8 @@ function MainContent(){
     const newArray = raceDummy;
     const newArray2 = skillDummy;
     const newArray3 = supportDummy;
+    const selectedUma = useState("");
+    const selectedArray = useState(["","","","","",""])
     const typeKind =[
         {name : "speed", img : "/images/types/i_type1.png"},
         {name : "stamina", img : "/images/types/i_type2.png"},
@@ -73,7 +89,8 @@ function MainContent(){
             </div>
             <div className = {styles.middle}>
                 <div className = {styles.selectedList}>
-
+                    <div className={styles.selectedUma}></div>
+                    <div className={styles.selectedSupport}></div>
                 </div>
                 <div className = {styles.eventSearch}>
 
