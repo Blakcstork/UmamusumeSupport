@@ -44,7 +44,9 @@ function UmaList({array}) {
 
 }
 
-
+function EventSearch(){
+    
+}
 
 function SelectedSupport({selectedArray}){
     return (
@@ -89,8 +91,12 @@ function MainContent(){
             </div>
             <div className = {styles.middle}>
                 <div className = {styles.selectedList}>
-                    <div className={styles.selectedUma}></div>
-                    <div className={styles.selectedSupport}></div>
+                    <div className={styles.selectedUma}>
+
+                    </div>
+                    <div className={styles.selectedSupport}>
+                        <SelectedSupport selectedArray={selectedArray}/>
+                    </div>
                 </div>
                 <div className = {styles.eventSearch}>
 
