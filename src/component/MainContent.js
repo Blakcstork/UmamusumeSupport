@@ -44,8 +44,18 @@ function UmaList({array}) {
 
 }
 
-function EventSearch(){
-    
+function EventSearch({array}){
+    return(
+        <div>
+        {
+            array.map((event) => 
+                <div>
+                    {event.eventName}
+                </div>
+            )
+        }
+        </div>
+    )
 }
 
 function SelectedSupport({selectedArray}){
